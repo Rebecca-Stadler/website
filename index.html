@@ -1,689 +1,654 @@
+```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dauerhafte Haarentfernung in Passau | Studio Haarfrei</title>
-  <meta name="description" content="Dauerhaft glatte Haut ohne Rasieren, Waxing oder Stoppeln. Jetzt kostenlose Beratung bei Studio Haarfrei in Passau sichern." />
+  <title>Achtsam Wohnen | Schlafberatung & natürliches Wohlbefinden</title>
+  <meta name="description" content="Persönliche Schlafberatung von Tanja Eder. Gesunde Schlafsysteme, Naturmaterialien und Grander Wasser für erholsamen Schlaf und mehr Wohlbefinden." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --cream: #fbf6ef;
-      --cream-dark: #efe3d2;
-      --sand: #d7b894;
-      --gold: #b98b55;
-      --gold-dark: #8d6538;
-      --brown: #2d2118;
-      --muted: #75685e;
+      --cream: #f7f2ea;
+      --sand: #e8dccb;
+      --sage: #8c9b83;
+      --sage-dark: #55624f;
+      --olive: #3f4a38;
+      --brown: #8a6f57;
+      --text: #2d2d2a;
+      --muted: #6f6b63;
       --white: #ffffff;
-      --rose: #f4ded8;
-      --shadow: 0 22px 70px rgba(45, 33, 24, .14);
-      --radius: 28px;
+      --shadow: 0 20px 50px rgba(63, 74, 56, 0.12);
+      --radius: 26px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Montserrat', Arial, sans-serif;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
       background: var(--cream);
-      color: var(--brown);
-      line-height: 1.6;
-      overflow-x: hidden;
+      line-height: 1.7;
     }
 
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--olive);
+      line-height: 1.15;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     .container {
-      width: min(1160px, calc(100% - 40px));
-      margin: 0 auto;
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(247, 242, 234, 0.88);
+      backdrop-filter: blur(16px);
+      z-index: 10;
+      border-bottom: 1px solid rgba(85, 98, 79, 0.12);
+    }
+
+    .nav {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--olive);
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 34px;
+      align-items: center;
+      font-size: 0.95rem;
+      color: var(--sage-dark);
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      border: none;
+      padding: 14px 24px;
       border-radius: 999px;
-      padding: 17px 28px;
-      font-weight: 800;
-      font-size: 15px;
-      cursor: pointer;
-      transition: .25s ease;
-      box-shadow: 0 14px 35px rgba(185, 139, 85, .28);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      background: var(--sage-dark);
       color: var(--white);
+      font-weight: 600;
+      transition: 0.3s ease;
+      box-shadow: 0 12px 28px rgba(85, 98, 79, 0.22);
     }
 
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 45px rgba(185,139,85,.38); }
-
-    .btn-light {
-      background: var(--white);
-      color: var(--brown);
-      box-shadow: 0 14px 35px rgba(45,33,24,.12);
+    .btn:hover {
+      background: var(--olive);
+      transform: translateY(-2px);
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(185, 139, 85, .12);
-      color: var(--gold-dark);
-      border: 1px solid rgba(185, 139, 85, .25);
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Playfair Display', Georgia, serif;
-      line-height: 1.06;
-      color: var(--brown);
-    }
-
-    h1 { font-size: clamp(42px, 6vw, 78px); letter-spacing: -.04em; margin-bottom: 22px; }
-    h2 { font-size: clamp(34px, 4.4vw, 58px); letter-spacing: -.035em; margin-bottom: 18px; }
-    h3 { font-size: 27px; margin-bottom: 12px; }
-
-    p { color: var(--muted); font-size: 17px; }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(251,246,239,.88);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(185,139,85,.15);
-    }
-
-    .nav {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: .03em;
-      text-transform: uppercase;
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold), var(--cream-dark));
-      display: grid;
-      place-items: center;
-      font-family: 'Playfair Display', serif;
-      color: white;
-      font-size: 21px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 26px;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 700;
+    .btn.secondary {
+      background: transparent;
+      color: var(--olive);
+      border: 1px solid rgba(63, 74, 56, 0.28);
+      box-shadow: none;
     }
 
     .hero {
-      position: relative;
-      padding: 72px 0 86px;
+      min-height: 100vh;
+      padding: 150px 0 90px;
       background:
-        radial-gradient(circle at 12% 18%, rgba(244,222,216,.95), transparent 34%),
-        radial-gradient(circle at 90% 18%, rgba(215,184,148,.42), transparent 34%),
-        linear-gradient(180deg, #fffaf4 0%, var(--cream) 100%);
-      overflow: hidden;
+        linear-gradient(90deg, rgba(247,242,234,0.98) 0%, rgba(247,242,234,0.82) 46%, rgba(247,242,234,0.25) 100%),
+        url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=80") center/cover;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.08fr .92fr;
-      gap: 58px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 70px;
       align-items: center;
     }
 
-    .hero-copy .lead {
-      font-size: 21px;
-      color: #5f5147;
-      max-width: 640px;
-      margin-bottom: 28px;
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--brown);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      max-width: 760px;
+      margin-bottom: 26px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      font-size: 1.17rem;
+      color: var(--muted);
+      margin-bottom: 34px;
     }
 
     .hero-actions {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
       gap: 16px;
-      margin: 30px 0 26px;
-    }
-
-    .microtrust {
-      display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .pill {
-      background: rgba(255,255,255,.78);
-      border: 1px solid rgba(185,139,85,.18);
-      color: var(--brown);
-      border-radius: 999px;
-      padding: 10px 14px;
-      font-size: 14px;
-      font-weight: 700;
-      box-shadow: 0 10px 28px rgba(45,33,24,.06);
     }
 
     .hero-card {
-      position: relative;
-      border-radius: 38px;
-      overflow: hidden;
-      min-height: 620px;
-      background:
-        linear-gradient(180deg, rgba(45,33,24,.08), rgba(45,33,24,.55)),
-        url('https://images.unsplash.com/photo-1596178060810-72f53ce9a65c?auto=format&fit=crop&w=1000&q=80') center/cover;
-      box-shadow: var(--shadow);
-    }
-
-    .floating-card {
-      position: absolute;
-      left: 28px;
-      right: 28px;
-      bottom: 28px;
-      background: rgba(255,255,255,.9);
+      background: rgba(255,255,255,0.78);
       backdrop-filter: blur(16px);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: 0 18px 55px rgba(0,0,0,.18);
-    }
-
-    .floating-card strong {
-      display: block;
-      font-size: 24px;
-      margin-bottom: 8px;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 22px;
-    }
-
-    .stat {
-      background: var(--white);
-      border: 1px solid rgba(185,139,85,.15);
-      border-radius: 22px;
-      padding: 18px;
-      box-shadow: 0 12px 35px rgba(45,33,24,.07);
-    }
-
-    .stat b {
-      display: block;
-      font-size: 26px;
-      color: var(--gold-dark);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-
-    section { padding: 88px 0; }
-
-    .center { text-align: center; max-width: 790px; margin: 0 auto 46px; }
-
-    .problem-grid, .benefit-grid, .area-grid, .steps, .faq-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: rgba(255,255,255,.76);
-      border: 1px solid rgba(185,139,85,.16);
       border-radius: var(--radius);
-      padding: 30px;
-      box-shadow: 0 16px 50px rgba(45,33,24,.08);
+      padding: 38px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.7);
     }
 
-    .card-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, rgba(185,139,85,.18), rgba(244,222,216,.8));
-      display: grid;
-      place-items: center;
-      font-size: 25px;
-      margin-bottom: 20px;
+    .hero-card h3 {
+      font-size: 2rem;
+      margin-bottom: 16px;
     }
 
-    .split {
+    .hero-card p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 54px;
+    }
+
+    .section-head.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2.3rem, 4vw, 4rem);
+      margin-bottom: 18px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .intro {
+      background: var(--white);
+    }
+
+    .intro-grid {
       display: grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 58px;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 70px;
       align-items: center;
     }
 
-    .image-panel {
-      border-radius: 36px;
-      min-height: 540px;
-      background: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1000&q=80') center/cover;
+    .portrait {
+      min-height: 520px;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(rgba(85,98,79,0.15), rgba(85,98,79,0.15)),
+        url("tanja-eder.jpg") center/cover;
       box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
     }
 
-    .image-panel::after {
-      content: 'sicher & schonend';
-      position: absolute;
-      left: 24px;
-      bottom: 24px;
-      background: rgba(255,255,255,.9);
+    .placeholder-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    .quote {
+      margin-top: 30px;
+      padding: 28px;
+      background: var(--cream);
+      border-left: 4px solid var(--sage);
+      border-radius: 18px;
+      font-family: "Playfair Display", serif;
+      color: var(--olive);
+      font-size: 1.55rem;
+    }
+
+    .life-grid,
+    .service-grid,
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 34px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(85,98,79,0.08);
+    }
+
+    .card h3 {
+      font-size: 1.55rem;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .number {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--sand);
+      color: var(--olive);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .services {
+      background: linear-gradient(180deg, var(--cream), #efe6d8);
+    }
+
+    .service-card {
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      padding: 8px 13px;
       border-radius: 999px;
-      padding: 12px 18px;
-      font-weight: 800;
-      color: var(--gold-dark);
+      background: var(--cream);
+      color: var(--sage-dark);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .highlight {
+      background: var(--olive);
+      color: var(--white);
+      border-radius: 34px;
+      padding: 74px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .highlight h2,
+    .highlight h3 {
+      color: var(--white);
+    }
+
+    .highlight p {
+      color: rgba(255,255,255,0.78);
     }
 
     .check-list {
-      display: grid;
-      gap: 13px;
-      margin: 24px 0 32px;
+      list-style: none;
+      margin-top: 24px;
     }
 
-    .check {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      color: var(--brown);
+    .check-list li {
+      margin-bottom: 12px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .check-list li::before {
+      content: "✓";
+      margin-right: 10px;
+      color: var(--sand);
       font-weight: 700;
     }
 
-    .check span {
-      flex: 0 0 25px;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      background: var(--gold);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-size: 14px;
-      margin-top: 1px;
-    }
-
-    .cream-band {
-      background: linear-gradient(135deg, var(--brown), #4d3929);
-      color: white;
-      border-radius: 42px;
-      padding: 60px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .cream-band h2, .cream-band p { color: white; }
-    .cream-band p { opacity: .82; }
-
-    .before-after {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 22px;
-      margin-top: 36px;
-    }
-
-    .ba-card {
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 28px;
-      padding: 30px;
-    }
-
-    .ba-card ul { list-style: none; display: grid; gap: 12px; margin-top: 18px; }
-    .ba-card li { font-weight: 700; color: rgba(255,255,255,.9); }
-
-    .areas { background: #fffaf4; }
-    .area-card { min-height: 210px; }
-    .area-card ul { margin-left: 18px; color: var(--muted); font-weight: 600; }
-
-    .quote {
-      background: linear-gradient(135deg, #fff, #fff7ef);
-      border-radius: 36px;
-      padding: 48px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(185,139,85,.16);
-    }
-
-    .quote p {
-      font-size: clamp(24px, 3.4vw, 42px);
-      line-height: 1.2;
-      font-family: 'Playfair Display', serif;
-      color: var(--brown);
-      margin-bottom: 20px;
-    }
-
-    .form-section {
-      background:
-        radial-gradient(circle at 15% 0%, rgba(244,222,216,.9), transparent 32%),
-        linear-gradient(180deg, var(--cream), #fff);
-    }
-
-    .form-wrap {
-      display: grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 42px;
-      align-items: start;
+    .appointment {
       background: var(--white);
-      border-radius: 42px;
-      padding: 42px;
+    }
+
+    .appointment-box {
+      background: var(--cream);
+      border-radius: 34px;
+      padding: 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
       box-shadow: var(--shadow);
-      border: 1px solid rgba(185,139,85,.16);
     }
 
-    form { display: grid; gap: 14px; }
-    input, select, textarea {
-      width: 100%;
-      border: 1px solid rgba(45,33,24,.14);
-      background: #fffaf6;
-      border-radius: 18px;
-      padding: 16px 18px;
-      font-family: inherit;
-      font-size: 15px;
-      outline: none;
-    }
-    input:focus, select:focus, textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 4px rgba(185,139,85,.13); }
-    textarea { min-height: 110px; resize: vertical; }
-
-    .faq-grid { grid-template-columns: repeat(2,1fr); }
-    details {
-      background: rgba(255,255,255,.8);
-      border: 1px solid rgba(185,139,85,.16);
+    .time-card {
+      background: var(--white);
       border-radius: 22px;
-      padding: 22px 24px;
-      box-shadow: 0 14px 40px rgba(45,33,24,.06);
+      padding: 28px;
+      margin-bottom: 18px;
     }
-    summary { cursor: pointer; font-weight: 800; color: var(--brown); }
-    details p { margin-top: 12px; font-size: 15px; }
+
+    .time-card strong {
+      color: var(--olive);
+    }
+
+    .final {
+      text-align: center;
+      background:
+        linear-gradient(rgba(247,242,234,0.86), rgba(247,242,234,0.9)),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80") center/cover;
+    }
+
+    .final h2 {
+      font-size: clamp(2.5rem, 5vw, 4.7rem);
+      margin-bottom: 24px;
+    }
+
+    .final p {
+      max-width: 680px;
+      margin: 0 auto 34px;
+      color: var(--muted);
+      font-size: 1.13rem;
+    }
 
     footer {
-      background: var(--brown);
-      color: white;
-      padding: 46px 0 95px;
-    }
-    footer p, footer a { color: rgba(255,255,255,.72); }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 1fr 1fr;
-      gap: 32px;
+      background: var(--olive);
+      color: rgba(255,255,255,0.78);
+      padding: 38px 0;
+      text-align: center;
+      font-size: 0.9rem;
     }
 
-    .mobile-sticky {
-      display: none;
-      position: fixed;
-      left: 14px;
-      right: 14px;
-      bottom: 14px;
-      z-index: 80;
-    }
-    .mobile-sticky .btn { width: 100%; }
+    @media (max-width: 940px) {
+      .nav-links {
+        display: none;
+      }
 
-    @media (max-width: 920px) {
-      .nav-links { display: none; }
-      .hero-grid, .split, .form-wrap, .footer-grid { grid-template-columns: 1fr; }
-      .hero { padding-top: 44px; }
-      .hero-card { min-height: 480px; }
-      .stats, .problem-grid, .benefit-grid, .area-grid, .steps { grid-template-columns: 1fr; }
-      .before-after, .faq-grid { grid-template-columns: 1fr; }
-      .cream-band { padding: 34px 24px; border-radius: 30px; }
-      .form-wrap { padding: 26px; border-radius: 30px; }
-      .mobile-sticky { display: block; }
+      .hero-grid,
+      .intro-grid,
+      .highlight,
+      .appointment-box {
+        grid-template-columns: 1fr;
+      }
+
+      .life-grid,
+      .service-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 130px;
+      }
+
+      .highlight,
+      .appointment-box {
+        padding: 42px 26px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="container nav">
-      <a href="#top" class="brand" aria-label="Studio Haarfrei">
-        <span class="brand-mark">H</span>
-        <span>Studio Haarfrei</span>
-      </a>
-      <nav class="nav-links">
-        <a href="#vorteile">Vorteile</a>
-        <a href="#behandlung">Behandlung</a>
-        <a href="#bereiche">Bereiche</a>
-        <a href="#faq">FAQ</a>
-        <a href="#beratung" class="btn btn-primary">Termin sichern</a>
-      </nav>
-    </div>
-  </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Dauerhafte Haarentfernung in Passau</span>
-          <h1>Nie wieder rasieren. Jeden Tag glatte Haut.</h1>
-          <p class="lead">Stell dir vor, du wachst morgens auf und deine Haut ist bereits glatt. Ohne Stoppeln. Ohne Rasierpickel. Ohne ständigen Aufwand. Studio Haarfrei begleitet dich sicher, professionell und individuell auf dem Weg zu dauerhaft haarfreier Haut.</p>
-          <div class="hero-actions">
-            <a href="#beratung" class="btn btn-primary">Kostenlose Beratung sichern</a>
-            <a href="#vorteile" class="btn btn-light">Mehr erfahren</a>
-          </div>
-          <div class="microtrust">
-            <span class="pill">✓ Über 2.000 zufriedene Kunden</span>
-            <span class="pill">✓ Über 8 Jahre Erfahrung</span>
-            <span class="pill">✓ NiSV-qualifiziertes Team</span>
-          </div>
-          <div class="stats">
-            <div class="stat"><b>2.000+</b><p>zufriedene Kunden</p></div>
-            <div class="stat"><b>8+</b><p>Jahre Erfahrung</p></div>
-            <div class="stat"><b>CE/FDA</b><p>zertifizierte Technologie</p></div>
-          </div>
-        </div>
-        <div class="hero-card" role="img" aria-label="Frau mit glatter Haut">
-          <div class="floating-card">
-            <strong>Glatt. Gepflegt. Frei.</strong>
-            <p>Die moderne Lösung für Frauen, die keine Lust mehr auf Rasieren, Waxing oder eingewachsene Haare haben.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">Achtsam Wohnen</a>
 
-    <section id="vorteile">
-      <div class="container">
-        <div class="center">
-          <span class="eyebrow">Das eigentliche Problem</span>
-          <h2>Rasieren kostet mehr als nur Zeit.</h2>
-          <p>Jede Rasur löst das Problem nur für kurze Zeit. Danach kommen Stoppeln, Hautirritationen und der nächste Termin im Bad.</p>
-        </div>
-        <div class="problem-grid">
-          <div class="card"><div class="card-icon">⏱</div><h3>Ständiger Aufwand</h3><p>Morgens glatt, abends schon wieder stoppelig. Rasieren wird zur Routine, die nie wirklich endet.</p></div>
-          <div class="card"><div class="card-icon">✕</div><h3>Hautstress</h3><p>Rasierpickel, Rötungen und eingewachsene Haare können die Haut sichtbar reizen.</p></div>
-          <div class="card"><div class="card-icon">☀</div><h3>Weniger Spontanität</h3><p>Schwimmbad, Urlaub, Kleid oder Date? Oft kommt vorher noch die Frage: „Muss ich mich rasieren?“</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="behandlung">
-      <div class="container split">
-        <div class="image-panel"></div>
-        <div>
-          <span class="eyebrow">Die Lösung</span>
-          <h2>Dauerhafte Haarentfernung, die zu deiner Haut passt.</h2>
-          <p>Bei Studio Haarfrei wird die Behandlung individuell auf deinen Haut- und Haartyp abgestimmt. Ziel ist eine langfristige Reduktion unerwünschter Haare – sicher, schonend und professionell.</p>
-          <div class="check-list">
-            <div class="check"><span>✓</span>Individuelle Beratung vor der Behandlung</div>
-            <div class="check"><span>✓</span>Moderne Diodenlaser-Technologie</div>
-            <div class="check"><span>✓</span>Geeignet für Gesicht, Achseln, Beine, Intimzone und mehr</div>
-            <div class="check"><span>✓</span>Schonende Anwendung durch qualifiziertes Team</div>
-            <div class="check"><span>✓</span>Sichtbar glatteres Hautgefühl nach wenigen Sitzungen möglich</div>
-          </div>
-          <a href="#beratung" class="btn btn-primary">Jetzt Beratung anfragen</a>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="cream-band">
-          <span class="eyebrow">Vorher vs. Nachher</span>
-          <h2>Was wäre, wenn Rasieren einfach kein Thema mehr wäre?</h2>
-          <p>Die Behandlung verkauft nicht nur glatte Haut. Sie verkauft Freiheit im Alltag.</p>
-          <div class="before-after">
-            <div class="ba-card">
-              <h3 style="color:white">Vorher</h3>
-              <ul>
-                <li>✗ Tägliches Rasieren</li>
-                <li>✗ Stoppeln nach kurzer Zeit</li>
-                <li>✗ Rasierpickel & Hautirritationen</li>
-                <li>✗ Immer wieder neue Klingen, Waxing oder Sugaring</li>
-              </ul>
-            </div>
-            <div class="ba-card">
-              <h3 style="color:white">Nachher</h3>
-              <ul>
-                <li>✓ Dauerhaft glattes Hautgefühl</li>
-                <li>✓ Weniger Aufwand im Alltag</li>
-                <li>✓ Mehr Selbstbewusstsein</li>
-                <li>✓ Mehr Spontanität im Sommer, Urlaub und Alltag</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="areas" id="bereiche">
-      <div class="container">
-        <div class="center">
-          <span class="eyebrow">Behandlungsbereiche</span>
-          <h2>Für alle Bereiche, bei denen du dir glatte Haut wünschst.</h2>
-          <p>Ob kleine Zonen oder größere Areale: Die Behandlung wird auf dich und deinen Wunschbereich abgestimmt.</p>
-        </div>
-        <div class="area-grid">
-          <div class="card area-card"><h3>Gesicht</h3><ul><li>Oberlippe</li><li>Kinn</li><li>Wangen</li></ul></div>
-          <div class="card area-card"><h3>Achseln</h3><ul><li>Schnell</li><li>Beliebt</li><li>Ideal für den Alltag</li></ul></div>
-          <div class="card area-card"><h3>Beine</h3><ul><li>Unterschenkel</li><li>Oberschenkel</li><li>Komplette Beine</li></ul></div>
-          <div class="card area-card"><h3>Intimbereich</h3><ul><li>Bikinizone</li><li>Intimzone</li><li>Diskret behandelt</li></ul></div>
-          <div class="card area-card"><h3>Arme</h3><ul><li>Unterarme</li><li>Oberarme</li><li>Hände</li></ul></div>
-          <div class="card area-card"><h3>Ganzkörper</h3><ul><li>Mehrere Zonen</li><li>Individueller Plan</li><li>Persönliche Beratung</li></ul></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="quote">
-          <p>„Viele Kundinnen sagen nach der Behandlung: Ich hätte es viel früher machen sollen.“</p>
-          <span class="eyebrow">Studio Haarfrei Passau</span>
-          <p style="font-size:17px;font-family:Montserrat;color:var(--muted);margin-top:10px">Weil dauerhaft glatte Haut nicht nur schöner aussieht – sie nimmt dir jeden Tag eine Entscheidung ab.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="center">
-          <span class="eyebrow">So einfach geht's</span>
-          <h2>Dein Weg zu dauerhaft glatter Haut.</h2>
-        </div>
-        <div class="steps">
-          <div class="card"><div class="card-icon">1</div><h3>Beratung sichern</h3><p>Du erzählst uns, welche Bereiche dich stören und welches Ergebnis du dir wünschst.</p></div>
-          <div class="card"><div class="card-icon">2</div><h3>Plan erstellen</h3><p>Wir prüfen Haut- und Haartyp und erstellen einen passenden Behandlungsplan.</p></div>
-          <div class="card"><div class="card-icon">3</div><h3>Glatter fühlen</h3><p>Sitzung für Sitzung kommst du deinem Ziel näher: weniger Haare, weniger Aufwand, mehr Freiheit.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="container">
-        <div class="center">
-          <span class="eyebrow">Häufige Fragen</span>
-          <h2>Was du vor deiner Beratung wissen solltest.</h2>
-        </div>
-        <div class="faq-grid">
-          <details open><summary>Ist die Behandlung schmerzhaft?</summary><p>Die Behandlung wird von vielen Kundinnen als gut auszuhalten beschrieben. Das Empfinden hängt vom Bereich und Hauttyp ab.</p></details>
-          <details><summary>Wie viele Sitzungen brauche ich?</summary><p>Das ist individuell unterschiedlich, weil Haare in Wachstumszyklen wachsen. In der Beratung erhältst du eine realistische Einschätzung.</p></details>
-          <details><summary>Wann sehe ich Ergebnisse?</summary><p>Viele Kundinnen bemerken bereits nach wenigen Sitzungen, dass das Haarwachstum sichtbar nachlässt und die Haut glatter wirkt.</p></details>
-          <details><summary>Für wen eignet sich die Behandlung?</summary><p>Die Eignung hängt von Haut, Haarfarbe und Behandlungsbereich ab. Genau deshalb ist die persönliche Beratung der erste wichtige Schritt.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section class="form-section" id="beratung">
-      <div class="container form-wrap">
-        <div>
-          <span class="eyebrow">Kostenlose Beratung</span>
-          <h2>Finde heraus, ob dauerhafte Haarentfernung zu dir passt.</h2>
-          <p>Trage dich jetzt ein. Studio Haarfrei meldet sich bei dir, beantwortet deine Fragen und bespricht mit dir deinen persönlichen Behandlungsplan.</p>
-          <div class="check-list">
-            <div class="check"><span>✓</span>Unverbindliche Erstberatung</div>
-            <div class="check"><span>✓</span>Individuelle Einschätzung deiner Wunschbereiche</div>
-            <div class="check"><span>✓</span>Direkt in Passau, Ludwigstraße 2</div>
-          </div>
-        </div>
-        <form action="#" method="post">
-          <input type="text" name="name" placeholder="Vorname" required>
-          <input type="tel" name="phone" placeholder="Telefonnummer" required>
-          <input type="email" name="email" placeholder="E-Mail-Adresse">
-          <select name="bereich" required>
-            <option value="">Welcher Bereich interessiert dich?</option>
-            <option>Gesicht</option>
-            <option>Achseln</option>
-            <option>Beine</option>
-            <option>Intimbereich / Bikinizone</option>
-            <option>Arme</option>
-            <option>Ganzkörper</option>
-            <option>Ich bin unsicher</option>
-          </select>
-          <textarea name="message" placeholder="Deine Frage oder Wunschzeit"></textarea>
-          <button class="btn btn-primary" type="submit">Beratung kostenlos anfragen</button>
-          <p style="font-size:12px">Mit dem Absenden erklärst du dich einverstanden, zur Terminabstimmung kontaktiert zu werden.</p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="brand" style="margin-bottom:16px"><span class="brand-mark">H</span><span>Studio Haarfrei</span></div>
-        <p>Dauerhafte Haarentfernung mit moderner Diodenlaser-Technologie in Passau.</p>
-      </div>
-      <div>
-        <h3 style="color:white;font-size:22px">Kontakt</h3>
-        <p>Ludwigstraße 2<br>94032 Passau</p>
-        <p><a href="tel:+4985121247157">+49 851 21247157</a><br><a href="mailto:info@studiohaarfrei.de">info@studiohaarfrei.de</a></p>
-      </div>
-      <div>
-        <h3 style="color:white;font-size:22px">Termin</h3>
-        <p>Bereit für glatte Haut ohne ständiges Rasieren?</p>
-        <a href="#beratung" class="btn btn-light" style="margin-top:14px">Jetzt Beratung sichern</a>
-      </div>
-    </div>
-  </footer>
-
-  <div class="mobile-sticky">
-    <a href="#beratung" class="btn btn-primary">Kostenlose Beratung sichern</a>
+    <nav class="nav-links">
+      <a href="#schlaf">Gesund schlafen</a>
+      <a href="#grander">Grander Wasser</a>
+      <a href="#termin">Termin</a>
+      <a href="#termin" class="btn">Beratung buchen</a>
+    </nav>
   </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Schlafberatung · Naturmaterialien · Wohlbefinden</span>
+      <h1>Wieder erholsam schlafen. Natürlich. Persönlich. Achtsam.</h1>
+      <p>
+        Ich höre zu. Ich begleite. Ich helfe dir, wieder gut zu schlafen.
+        Bei Achtsam Wohnen findest du persönliche Schlafberatung, natürliche Schlafsysteme
+        und Lösungen, die wirklich zu deinem Leben passen.
+      </p>
+      <div class="hero-actions">
+        <a href="#termin" class="btn">Jetzt Beratungstermin vereinbaren</a>
+        <a href="#willkommen" class="btn secondary">Mehr erfahren</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>Dein Schlaf verdient Zeit.</h3>
+      <p>
+        Kein schneller Verkauf. Keine Beratung zwischen Tür und Angel.
+        Sondern ein ruhiges Gespräch, ein ehrlicher Blick auf deine Situation
+        und eine Lösung, die dich langfristig unterstützt.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="intro" id="willkommen">
+  <div class="container intro-grid">
+    <div>
+      <div class="portrait"></div>
+      <p class="placeholder-note">Bildplatzhalter: persönliches Foto von Tanja Eder einfügen.</p>
+    </div>
+
+    <div>
+      <span class="eyebrow">Willkommen bei Achtsam Wohnen</span>
+      <h2>Schlaf ist die Basis für Gesundheit, Energie und Lebensfreude.</h2>
+      <p>
+        Mein Name ist Tanja Eder und ich bin Schlafspezialistin aus Leidenschaft.
+        Ich unterstütze Menschen dabei, die Ursachen ihrer Schlafprobleme zu erkennen
+        und wieder zu einem gesunden, erholsamen Schlaf zu finden.
+      </p>
+      <p>
+        In einem persönlichen Gespräch analysieren wir gemeinsam deine Situation.
+        Dabei geht es nicht nur um Matratzen oder Bettausstattung, sondern um dich als Mensch:
+        deine Gewohnheiten, deinen Alltag, deine Bedürfnisse und dein Wohlbefinden.
+      </p>
+      <div class="quote">
+        „Gerne unterstütze ich dich auf dem Weg zu einem besseren Schlaf.
+        Persönlich, ehrlich und mit ganzem Herzen.“
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="schlaf">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Ganzheitlich gedacht</span>
+      <h2>Gesunder Schlaf beeinflusst dein gesamtes Leben.</h2>
+      <p>
+        Wenn der Schlaf fehlt, leidet oft alles andere. Deshalb betrachten wir bei Achtsam Wohnen
+        fünf zentrale Lebensbereiche.
+      </p>
+    </div>
+
+    <div class="life-grid">
+      <div class="card"><div class="number">1</div><h3>Schlaf</h3><p>Die wichtigste Regenerationsphase für Körper und Geist.</p></div>
+      <div class="card"><div class="number">2</div><h3>Bewegung</h3><p>Ein aktiver Körper unterstützt gesunden Schlaf und mehr Energie.</p></div>
+      <div class="card"><div class="number">3</div><h3>Ernährung</h3><p>Was wir täglich zu uns nehmen, wirkt sich auf unsere Schlafqualität aus.</p></div>
+      <div class="card"><div class="number">4</div><h3>Soziales Umfeld</h3><p>Innere Ruhe und Beziehungen beeinflussen unser Wohlbefinden.</p></div>
+      <div class="card"><div class="number">5</div><h3>Arbeit & Alltag</h3><p>Stress und Belastung können langfristig gesunden Schlaf verhindern.</p></div>
+      <div class="card"><div class="number">✓</div><h3>Gemeinsam lösen</h3><p>Wir finden heraus, was dein Schlaf wirklich braucht.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Unsere Schwerpunkte</span>
+      <h2>Natürliche Lösungen für besseren Schlaf und mehr Wohlbefinden.</h2>
+    </div>
+
+    <div class="service-grid">
+      <div class="card service-card">
+        <div>
+          <h3>Gesunde Schlafsysteme</h3>
+          <p>
+            Individuelle Beratung, Liegetest im Geschäft und hochwertige Schlafsysteme
+            von Pronatura für ergonomisches, natürliches Schlafen.
+          </p>
+        </div>
+        <div class="tags">
+          <span class="tag">Matratzen</span>
+          <span class="tag">Schlafsysteme</span>
+          <span class="tag">Liegetest</span>
+        </div>
+      </div>
+
+      <div class="card service-card" id="grander">
+        <div>
+          <h3>Grander Wasserbelebung</h3>
+          <p>
+            Als zertifizierte Granderberaterin erklärt Tanja Eder, was Wasserbelebung bedeutet
+            und wie belebtes Wasser im Alltag erlebt werden kann.
+          </p>
+        </div>
+        <div class="tags">
+          <span class="tag">Beratung</span>
+          <span class="tag">Sanomag</span>
+          <span class="tag">Grander Wasser testen</span>
+        </div>
+      </div>
+
+      <div class="card service-card">
+        <div>
+          <h3>Natürliche Bettwaren</h3>
+          <p>
+            Bio-Baumwolle, hochwertige Spannbettwäsche sowie Merino-Wolle-Kissen und Decken
+            für ein bewusstes, schadstofffreies Schlafumfeld.
+          </p>
+        </div>
+        <div class="tags">
+          <span class="tag">Cotonier</span>
+          <span class="tag">Belladonna</span>
+          <span class="tag">Igel Products</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container highlight">
+    <div>
+      <span class="eyebrow">Was uns einzigartig macht</span>
+      <h2>Persönliche Schlafberatung in ruhiger, ländlicher Atmosphäre.</h2>
+      <p>
+        Bei Achtsam Wohnen steht nicht das Produkt im Mittelpunkt, sondern der Mensch.
+        Tanja nimmt sich Zeit, hört zu und begleitet dich Schritt für Schritt.
+      </p>
+    </div>
+
+    <div>
+      <h3>Deine Vorteile</h3>
+      <ul class="check-list">
+        <li>Separate Beratung mit Liegetest</li>
+        <li>Natürliche und schadstofffreie Materialien</li>
+        <li>Zertifizierte Granderberatung</li>
+        <li>Keine Großflächenmöbelhaus-Atmosphäre</li>
+        <li>Persönlich, ehrlich und lösungsorientiert</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="appointment" id="termin">
+  <div class="container appointment-box">
+    <div>
+      <span class="eyebrow">Termin vereinbaren</span>
+      <h2>Ich nehme mir Zeit für dich.</h2>
+      <p>
+        Damit jedes Gespräch ruhig, persönlich und ohne Unterbrechung stattfinden kann,
+        arbeitet Achtsam Wohnen mit festen Präsenztagen und individuellen Beratungsterminen.
+      </p>
+      <br>
+      <a href="#" class="btn">Wunschtermin online buchen</a>
+    </div>
+
+    <div>
+      <div class="time-card">
+        <strong>Präsenztage im Geschäft</strong><br>
+        Dienstag: 10:00 – 18:00 Uhr<br>
+        Donnerstag: 10:00 – 18:00 Uhr
+      </div>
+
+      <div class="time-card">
+        <strong>Beratung nach Vereinbarung</strong><br>
+        Montag, Mittwoch & Freitag<br>
+        Abendtermine ab 18:00 Uhr online buchbar<br>
+        Samstag auf Anfrage möglich
+      </div>
+
+      <div class="time-card">
+        <strong>Alternative</strong><br>
+        Kurzes Kontaktformular für individuelle Anfragen integrieren.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container">
+    <span class="eyebrow">Achtsam Wohnen</span>
+    <h2>Gesund schlafen. Natürlich wohnen. Bewusst leben.</h2>
+    <p>
+      Ich freue mich darauf, dich persönlich kennenzulernen und gemeinsam mit dir
+      den Weg zu besserem Schlaf und mehr Wohlbefinden zu gehen.
+    </p>
+    <a href="#termin" class="btn">Jetzt Termin vereinbaren</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2025 Achtsam Wohnen · Schlafberatung · Naturmaterialien · Grander Wasser
+  </div>
+</footer>
+
 </body>
 </html>
+```
