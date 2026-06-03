@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Achtsam Wohnen | Schlafberatung & natürliches Wohlbefinden</title>
-  <meta name="description" content="Persönliche Schlafberatung von Tanja Eder. Gesunde Schlafsysteme, Naturmaterialien und Grander Wasser für erholsamen Schlaf und mehr Wohlbefinden." />
+  <title>Über mich | Achtsam Wohnen</title>
+  <meta name="description" content="Lernen Sie Tanja von Achtsam Wohnen kennen: persönliche Schlafberatung, natürliche Wohnkonzepte, Grander Wasserberatung und individuelle Lösungen für erholsamen Schlaf." />
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --cream: #f7f2ea;
-      --sand: #e8dccb;
+      --sand: #e7d8c4;
       --sage: #8c9b83;
-      --sage-dark: #55624f;
+      --sage-dark: #56634f;
       --olive: #3f4a38;
       --brown: #8a6f57;
-      --text: #2d2d2a;
-      --muted: #6f6b63;
+      --text: #2e2e2a;
+      --muted: #6d685f;
       --white: #ffffff;
-      --shadow: 0 20px 50px rgba(63, 74, 56, 0.12);
-      --radius: 26px;
+      --shadow: 0 22px 55px rgba(63, 74, 56, 0.13);
+      --radius: 28px;
     }
 
     * {
@@ -32,8 +32,8 @@
 
     body {
       font-family: "Inter", sans-serif;
-      color: var(--text);
       background: var(--cream);
+      color: var(--text);
       line-height: 1.7;
     }
 
@@ -57,10 +57,10 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(247, 242, 234, 0.88);
+      z-index: 20;
+      background: rgba(247, 242, 234, 0.9);
       backdrop-filter: blur(16px);
-      z-index: 10;
-      border-bottom: 1px solid rgba(85, 98, 79, 0.12);
+      border-bottom: 1px solid rgba(63, 74, 56, 0.1);
     }
 
     .nav {
@@ -74,29 +74,30 @@
       font-family: "Playfair Display", serif;
       font-size: 1.55rem;
       font-weight: 700;
-      color: var(--olive);
       letter-spacing: 0.04em;
+      color: var(--olive);
     }
 
     .nav-links {
       display: flex;
-      gap: 34px;
       align-items: center;
-      font-size: 0.95rem;
+      gap: 32px;
       color: var(--sage-dark);
+      font-size: 0.95rem;
+      font-weight: 500;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 24px;
+      padding: 14px 25px;
       border-radius: 999px;
       background: var(--sage-dark);
       color: var(--white);
       font-weight: 600;
+      box-shadow: 0 14px 30px rgba(86, 99, 79, 0.22);
       transition: 0.3s ease;
-      box-shadow: 0 12px 28px rgba(85, 98, 79, 0.22);
     }
 
     .btn:hover {
@@ -104,19 +105,18 @@
       transform: translateY(-2px);
     }
 
-    .btn.secondary {
+    .btn.light {
       background: transparent;
       color: var(--olive);
-      border: 1px solid rgba(63, 74, 56, 0.28);
+      border: 1px solid rgba(63, 74, 56, 0.24);
       box-shadow: none;
     }
 
     .hero {
-      min-height: 100vh;
-      padding: 150px 0 90px;
+      padding: 155px 0 95px;
       background:
-        linear-gradient(90deg, rgba(247,242,234,0.98) 0%, rgba(247,242,234,0.82) 46%, rgba(247,242,234,0.25) 100%),
-        url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=80") center/cover;
+        linear-gradient(90deg, rgba(247,242,234,0.98), rgba(247,242,234,0.82), rgba(247,242,234,0.35)),
+        url("https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1800&q=80") center/cover;
     }
 
     .hero-grid {
@@ -130,57 +130,58 @@
       display: inline-block;
       margin-bottom: 18px;
       color: var(--brown);
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
       font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
     }
 
     .hero h1 {
-      font-size: clamp(3rem, 7vw, 5.8rem);
-      max-width: 760px;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      max-width: 740px;
       margin-bottom: 26px;
     }
 
     .hero p {
-      max-width: 620px;
-      font-size: 1.17rem;
+      max-width: 610px;
+      font-size: 1.15rem;
       color: var(--muted);
       margin-bottom: 34px;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .hero-card {
-      background: rgba(255,255,255,0.78);
+    .portrait-card {
+      background: rgba(255,255,255,0.8);
       backdrop-filter: blur(16px);
       border-radius: var(--radius);
-      padding: 38px;
+      padding: 22px;
       box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,0.7);
     }
 
-    .hero-card h3 {
-      font-size: 2rem;
-      margin-bottom: 16px;
+    .portrait {
+      min-height: 520px;
+      border-radius: 22px;
+      background:
+        linear-gradient(rgba(63,74,56,0.12), rgba(63,74,56,0.12)),
+        url("tanja-eder.jpg") center/cover;
     }
 
-    .hero-card p {
-      margin: 0;
-      font-size: 1rem;
+    .caption {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
     section {
-      padding: 110px 0;
+      padding: 105px 0;
+    }
+
+    .white {
+      background: var(--white);
     }
 
     .section-head {
       max-width: 760px;
-      margin-bottom: 54px;
+      margin-bottom: 52px;
     }
 
     .section-head.center {
@@ -190,55 +191,52 @@
     }
 
     .section-head h2 {
-      font-size: clamp(2.3rem, 4vw, 4rem);
+      font-size: clamp(2.35rem, 4vw, 4rem);
       margin-bottom: 18px;
     }
 
     .section-head p {
       color: var(--muted);
-      font-size: 1.08rem;
+      font-size: 1.07rem;
     }
 
-    .intro {
-      background: var(--white);
-    }
-
-    .intro-grid {
+    .story-grid {
       display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
+      grid-template-columns: 0.9fr 1.1fr;
       gap: 70px;
       align-items: center;
     }
 
-    .portrait {
-      min-height: 520px;
+    .soft-box {
+      background: var(--cream);
       border-radius: var(--radius);
-      background:
-        linear-gradient(rgba(85,98,79,0.15), rgba(85,98,79,0.15)),
-        url("tanja-eder.jpg") center/cover;
+      padding: 44px;
       box-shadow: var(--shadow);
     }
 
-    .placeholder-note {
-      font-size: 0.85rem;
+    .soft-box h3 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+    }
+
+    .soft-box p {
       color: var(--muted);
-      margin-top: 14px;
+      margin-bottom: 16px;
     }
 
     .quote {
-      margin-top: 30px;
+      margin-top: 28px;
       padding: 28px;
-      background: var(--cream);
+      background: var(--white);
       border-left: 4px solid var(--sage);
       border-radius: 18px;
       font-family: "Playfair Display", serif;
-      color: var(--olive);
       font-size: 1.55rem;
+      color: var(--olive);
     }
 
-    .life-grid,
-    .service-grid,
-    .why-grid {
+    .values-grid,
+    .qualification-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
@@ -246,10 +244,10 @@
 
     .card {
       background: var(--white);
-      padding: 34px;
       border-radius: var(--radius);
+      padding: 34px;
       box-shadow: var(--shadow);
-      border: 1px solid rgba(85,98,79,0.08);
+      border: 1px solid rgba(86,99,79,0.08);
     }
 
     .card h3 {
@@ -261,9 +259,9 @@
       color: var(--muted);
     }
 
-    .number {
-      width: 44px;
-      height: 44px;
+    .icon {
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
       background: var(--sand);
       color: var(--olive);
@@ -274,41 +272,14 @@
       margin-bottom: 18px;
     }
 
-    .services {
-      background: linear-gradient(180deg, var(--cream), #efe6d8);
-    }
-
-    .service-card {
-      min-height: 360px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .tag {
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: var(--cream);
-      color: var(--sage-dark);
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
     .highlight {
       background: var(--olive);
       color: var(--white);
-      border-radius: 34px;
+      border-radius: 36px;
       padding: 74px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 54px;
+      gap: 55px;
       align-items: center;
     }
 
@@ -321,71 +292,69 @@
       color: rgba(255,255,255,0.78);
     }
 
-    .check-list {
+    .list {
       list-style: none;
       margin-top: 24px;
     }
 
-    .check-list li {
-      margin-bottom: 12px;
+    .list li {
+      margin-bottom: 13px;
       color: rgba(255,255,255,0.9);
     }
 
-    .check-list li::before {
+    .list li::before {
       content: "✓";
       margin-right: 10px;
       color: var(--sand);
       font-weight: 700;
     }
 
-    .appointment {
-      background: var(--white);
+    .philosophy {
+      background:
+        linear-gradient(rgba(247,242,234,0.9), rgba(247,242,234,0.95)),
+        url("https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1800&q=80") center/cover;
     }
 
-    .appointment-box {
-      background: var(--cream);
+    .philosophy-box {
+      max-width: 880px;
+      background: rgba(255,255,255,0.86);
+      backdrop-filter: blur(14px);
       border-radius: 34px;
-      padding: 64px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 42px;
+      padding: 60px;
       box-shadow: var(--shadow);
     }
 
-    .time-card {
-      background: var(--white);
-      border-radius: 22px;
-      padding: 28px;
-      margin-bottom: 18px;
-    }
-
-    .time-card strong {
-      color: var(--olive);
-    }
-
-    .final {
-      text-align: center;
-      background:
-        linear-gradient(rgba(247,242,234,0.86), rgba(247,242,234,0.9)),
-        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80") center/cover;
-    }
-
-    .final h2 {
-      font-size: clamp(2.5rem, 5vw, 4.7rem);
+    .philosophy-box h2 {
+      font-size: clamp(2.4rem, 4vw, 4rem);
       margin-bottom: 24px;
     }
 
-    .final p {
-      max-width: 680px;
+    .philosophy-box p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .cta {
+      text-align: center;
+      background: var(--white);
+    }
+
+    .cta h2 {
+      font-size: clamp(2.4rem, 5vw, 4.6rem);
+      margin-bottom: 22px;
+    }
+
+    .cta p {
+      max-width: 700px;
       margin: 0 auto 34px;
       color: var(--muted);
-      font-size: 1.13rem;
+      font-size: 1.12rem;
     }
 
     footer {
       background: var(--olive);
       color: rgba(255,255,255,0.78);
-      padding: 38px 0;
+      padding: 36px 0;
       text-align: center;
       font-size: 0.9rem;
     }
@@ -396,15 +365,13 @@
       }
 
       .hero-grid,
-      .intro-grid,
-      .highlight,
-      .appointment-box {
+      .story-grid,
+      .highlight {
         grid-template-columns: 1fr;
       }
 
-      .life-grid,
-      .service-grid,
-      .why-grid {
+      .values-grid,
+      .qualification-grid {
         grid-template-columns: 1fr;
       }
 
@@ -413,7 +380,7 @@
       }
 
       .highlight,
-      .appointment-box {
+      .philosophy-box {
         padding: 42px 26px;
       }
     }
@@ -424,13 +391,14 @@
 
 <header>
   <div class="container nav">
-    <a href="#" class="logo">Achtsam Wohnen</a>
+    <a href="index.html" class="logo">Achtsam Wohnen</a>
 
     <nav class="nav-links">
-      <a href="#schlaf">Gesund schlafen</a>
-      <a href="#grander">Grander Wasser</a>
-      <a href="#termin">Termin</a>
-      <a href="#termin" class="btn">Beratung buchen</a>
+      <a href="index.html">Startseite</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="gesund-schlafen.html">Gesund schlafen</a>
+      <a href="grander-wasser.html">Grander Wasser</a>
+      <a href="termin.html" class="btn">Termin buchen</a>
     </nav>
   </div>
 </header>
@@ -440,131 +408,131 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="eyebrow">Schlafberatung · Naturmaterialien · Wohlbefinden</span>
-      <h1>Wieder erholsam schlafen. Natürlich. Persönlich. Achtsam.</h1>
+      <span class="eyebrow">Über mich</span>
+      <h1>Ich begleite Menschen auf dem Weg zu besserem Schlaf.</h1>
       <p>
-        Ich höre zu. Ich begleite. Ich helfe dir, wieder gut zu schlafen.
-        Bei Achtsam Wohnen findest du persönliche Schlafberatung, natürliche Schlafsysteme
-        und Lösungen, die wirklich zu deinem Leben passen.
+        Mein Name ist Tanja. Mit Achtsam Wohnen verbinde ich persönliche Beratung,
+        natürliche Materialien und ein feines Gespür für das, was Menschen wirklich brauchen:
+        Ruhe, Vertrauen und Lösungen, die zum eigenen Leben passen.
       </p>
-      <div class="hero-actions">
-        <a href="#termin" class="btn">Jetzt Beratungstermin vereinbaren</a>
-        <a href="#willkommen" class="btn secondary">Mehr erfahren</a>
-      </div>
+      <a href="termin.html" class="btn">Persönlichen Termin vereinbaren</a>
     </div>
 
-    <div class="hero-card">
-      <h3>Dein Schlaf verdient Zeit.</h3>
-      <p>
-        Kein schneller Verkauf. Keine Beratung zwischen Tür und Angel.
-        Sondern ein ruhiges Gespräch, ein ehrlicher Blick auf deine Situation
-        und eine Lösung, die dich langfristig unterstützt.
-      </p>
+    <div class="portrait-card">
+      <div class="portrait"></div>
+      <p class="caption">Bildplatzhalter: persönliches Foto von Tanja im Laden oder bei der Beratung einfügen.</p>
     </div>
   </div>
 </section>
 
-<section class="intro" id="willkommen">
-  <div class="container intro-grid">
-    <div>
-      <div class="portrait"></div>
-      <p class="placeholder-note">Bildplatzhalter: persönliches Foto von Tanja Eder einfügen.</p>
+<section class="white">
+  <div class="container story-grid">
+    <div class="soft-box">
+      <span class="eyebrow">Meine Geschichte</span>
+      <h3>Aus Leidenschaft für natürliches Wohnen und gesunden Schlaf.</h3>
+      <p>
+        Schon immer war es mir wichtig, Räume so zu gestalten, dass sie Ruhe,
+        Harmonie und Wohlbefinden ausstrahlen. Mit Achtsam Wohnen habe ich einen Ort geschaffen,
+        an dem Menschen persönlich, einfühlsam und kompetent beraten werden.
+      </p>
+      <p>
+        Heute liegt mein besonderer Fokus auf gesundem Schlaf. Denn guter Schlaf ist keine
+        Selbstverständlichkeit. Er ist die Grundlage für Energie, Gesundheit und Lebensfreude.
+      </p>
     </div>
 
     <div>
-      <span class="eyebrow">Willkommen bei Achtsam Wohnen</span>
-      <h2>Schlaf ist die Basis für Gesundheit, Energie und Lebensfreude.</h2>
+      <span class="eyebrow">Meine Haltung</span>
+      <h2>Ich höre zu. Ich begleite. Ich helfe dir, wieder gut zu schlafen.</h2>
       <p>
-        Mein Name ist Tanja Eder und ich bin Schlafspezialistin aus Leidenschaft.
-        Ich unterstütze Menschen dabei, die Ursachen ihrer Schlafprobleme zu erkennen
-        und wieder zu einem gesunden, erholsamen Schlaf zu finden.
+        Bei meiner Beratung geht es nicht um schnelle Entscheidungen oder Standardlösungen.
+        Ich nehme mir Zeit, deine persönliche Situation zu verstehen.
       </p>
       <p>
-        In einem persönlichen Gespräch analysieren wir gemeinsam deine Situation.
-        Dabei geht es nicht nur um Matratzen oder Bettausstattung, sondern um dich als Mensch:
-        deine Gewohnheiten, deinen Alltag, deine Bedürfnisse und dein Wohlbefinden.
+        Gemeinsam betrachten wir, was deinen Schlaf beeinflusst – von deinem Schlafsystem
+        über deinen Alltag bis hin zu deinem Wohlbefinden. So entsteht eine Lösung,
+        die wirklich zu dir passt.
       </p>
       <div class="quote">
-        „Gerne unterstütze ich dich auf dem Weg zu einem besseren Schlaf.
-        Persönlich, ehrlich und mit ganzem Herzen.“
+        „Persönlich, ehrlich und mit ganzem Herzen.“
       </div>
     </div>
   </div>
 </section>
 
-<section id="schlaf">
+<section>
   <div class="container">
     <div class="section-head center">
-      <span class="eyebrow">Ganzheitlich gedacht</span>
-      <h2>Gesunder Schlaf beeinflusst dein gesamtes Leben.</h2>
+      <span class="eyebrow">Was mir wichtig ist</span>
+      <h2>Beratung, die den Menschen in den Mittelpunkt stellt.</h2>
       <p>
-        Wenn der Schlaf fehlt, leidet oft alles andere. Deshalb betrachten wir bei Achtsam Wohnen
-        fünf zentrale Lebensbereiche.
+        Achtsam Wohnen steht für Ruhe, Qualität und Vertrauen – fernab von Hektik,
+        Druck oder unpersönlicher Verkaufsatmosphäre.
       </p>
     </div>
 
-    <div class="life-grid">
-      <div class="card"><div class="number">1</div><h3>Schlaf</h3><p>Die wichtigste Regenerationsphase für Körper und Geist.</p></div>
-      <div class="card"><div class="number">2</div><h3>Bewegung</h3><p>Ein aktiver Körper unterstützt gesunden Schlaf und mehr Energie.</p></div>
-      <div class="card"><div class="number">3</div><h3>Ernährung</h3><p>Was wir täglich zu uns nehmen, wirkt sich auf unsere Schlafqualität aus.</p></div>
-      <div class="card"><div class="number">4</div><h3>Soziales Umfeld</h3><p>Innere Ruhe und Beziehungen beeinflussen unser Wohlbefinden.</p></div>
-      <div class="card"><div class="number">5</div><h3>Arbeit & Alltag</h3><p>Stress und Belastung können langfristig gesunden Schlaf verhindern.</p></div>
-      <div class="card"><div class="number">✓</div><h3>Gemeinsam lösen</h3><p>Wir finden heraus, was dein Schlaf wirklich braucht.</p></div>
+    <div class="values-grid">
+      <div class="card">
+        <div class="icon">01</div>
+        <h3>Zuhören</h3>
+        <p>
+          Jede Schlafsituation ist anders. Deshalb beginnt gute Beratung mit aufmerksamem Zuhören.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">02</div>
+        <h3>Verstehen</h3>
+        <p>
+          Gemeinsam schauen wir auf deine Bedürfnisse, deinen Körper und deinen Alltag.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">03</div>
+        <h3>Lösungen finden</h3>
+        <p>
+          Du erhältst eine ehrliche Empfehlung, die langfristig zu mehr Schlafqualität beitragen soll.
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="services">
+<section class="white">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Unsere Schwerpunkte</span>
-      <h2>Natürliche Lösungen für besseren Schlaf und mehr Wohlbefinden.</h2>
+      <span class="eyebrow">Ausbildung & Kompetenz</span>
+      <h2>Fachwissen, Erfahrung und ein ganzheitlicher Blick.</h2>
+      <p>
+        Meine Beratung verbindet Wissen rund um Schlaf, Ergonomie, Naturmaterialien
+        und Wohlbefinden mit persönlicher Erfahrung und viel Einfühlungsvermögen.
+      </p>
     </div>
 
-    <div class="service-grid">
-      <div class="card service-card">
-        <div>
-          <h3>Gesunde Schlafsysteme</h3>
-          <p>
-            Individuelle Beratung, Liegetest im Geschäft und hochwertige Schlafsysteme
-            von Pronatura für ergonomisches, natürliches Schlafen.
-          </p>
-        </div>
-        <div class="tags">
-          <span class="tag">Matratzen</span>
-          <span class="tag">Schlafsysteme</span>
-          <span class="tag">Liegetest</span>
-        </div>
+    <div class="qualification-grid">
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Schlafberatung</h3>
+        <p>
+          Individuelle Beratung zu Schlafsystemen, Matratzen, Bettwaren und ergonomischem Liegen.
+        </p>
       </div>
 
-      <div class="card service-card" id="grander">
-        <div>
-          <h3>Grander Wasserbelebung</h3>
-          <p>
-            Als zertifizierte Granderberaterin erklärt Tanja Eder, was Wasserbelebung bedeutet
-            und wie belebtes Wasser im Alltag erlebt werden kann.
-          </p>
-        </div>
-        <div class="tags">
-          <span class="tag">Beratung</span>
-          <span class="tag">Sanomag</span>
-          <span class="tag">Grander Wasser testen</span>
-        </div>
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Natürliche Materialien</h3>
+        <p>
+          Fokus auf hochwertige, schadstofffreie und natürliche Produkte für ein gesundes Schlafumfeld.
+        </p>
       </div>
 
-      <div class="card service-card">
-        <div>
-          <h3>Natürliche Bettwaren</h3>
-          <p>
-            Bio-Baumwolle, hochwertige Spannbettwäsche sowie Merino-Wolle-Kissen und Decken
-            für ein bewusstes, schadstofffreies Schlafumfeld.
-          </p>
-        </div>
-        <div class="tags">
-          <span class="tag">Cotonier</span>
-          <span class="tag">Belladonna</span>
-          <span class="tag">Igel Products</span>
-        </div>
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Granderberaterin</h3>
+        <p>
+          Als zertifizierte Granderberaterin begleite ich Menschen auch beim Thema Wasserbelebung.
+        </p>
       </div>
     </div>
   </div>
@@ -573,71 +541,63 @@
 <section>
   <div class="container highlight">
     <div>
-      <span class="eyebrow">Was uns einzigartig macht</span>
-      <h2>Persönliche Schlafberatung in ruhiger, ländlicher Atmosphäre.</h2>
+      <span class="eyebrow">Achtsam Wohnen</span>
+      <h2>Ein Ort für ruhige Beratung und bewusste Entscheidungen.</h2>
       <p>
-        Bei Achtsam Wohnen steht nicht das Produkt im Mittelpunkt, sondern der Mensch.
-        Tanja nimmt sich Zeit, hört zu und begleitet dich Schritt für Schritt.
+        In meinem Laden erwartet dich keine anonyme Verkaufsfläche, sondern eine persönliche Atmosphäre.
+        Hier kannst du Schlafsysteme erleben, Materialien fühlen und in Ruhe herausfinden,
+        was zu dir passt.
       </p>
     </div>
 
     <div>
-      <h3>Deine Vorteile</h3>
-      <ul class="check-list">
-        <li>Separate Beratung mit Liegetest</li>
-        <li>Natürliche und schadstofffreie Materialien</li>
-        <li>Zertifizierte Granderberatung</li>
-        <li>Keine Großflächenmöbelhaus-Atmosphäre</li>
-        <li>Persönlich, ehrlich und lösungsorientiert</li>
+      <h3>Das erwartet dich</h3>
+      <ul class="list">
+        <li>Persönliche Beratung mit ausreichend Zeit</li>
+        <li>Separater Beratungsbereich mit Liegetest</li>
+        <li>Natürliche Schlafsysteme und Bettwaren</li>
+        <li>Grander Wasser zum Kennenlernen</li>
+        <li>Ruhige, ländliche Atmosphäre</li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="appointment" id="termin">
-  <div class="container appointment-box">
-    <div>
-      <span class="eyebrow">Termin vereinbaren</span>
-      <h2>Ich nehme mir Zeit für dich.</h2>
+<section class="philosophy">
+  <div class="container">
+    <div class="philosophy-box">
+      <span class="eyebrow">Meine Beratungsphilosophie</span>
+      <h2>Gesunder Schlaf beginnt mit Vertrauen.</h2>
       <p>
-        Damit jedes Gespräch ruhig, persönlich und ohne Unterbrechung stattfinden kann,
-        arbeitet Achtsam Wohnen mit festen Präsenztagen und individuellen Beratungsterminen.
+        Ich glaube daran, dass eine gute Beratung nicht laut sein muss.
+        Sie braucht Ruhe, Aufmerksamkeit und echtes Interesse am Menschen.
+      </p>
+      <p>
+        Deshalb nehme ich mir bewusst Zeit für jeden Termin. Ohne Stress,
+        ohne Unterbrechung und ohne Druck. Du sollst dich verstanden fühlen
+        und mit einem guten Gefühl entscheiden können.
+      </p>
+      <p>
+        Mein Ziel ist es, dich auf deinem Weg zu besserem Schlaf zu begleiten –
+        mit Fachwissen, Erfahrung und einer Lösung, die zu deinem Körper,
+        deinem Zuhause und deinem Leben passt.
       </p>
       <br>
-      <a href="#" class="btn">Wunschtermin online buchen</a>
-    </div>
-
-    <div>
-      <div class="time-card">
-        <strong>Präsenztage im Geschäft</strong><br>
-        Dienstag: 10:00 – 18:00 Uhr<br>
-        Donnerstag: 10:00 – 18:00 Uhr
-      </div>
-
-      <div class="time-card">
-        <strong>Beratung nach Vereinbarung</strong><br>
-        Montag, Mittwoch & Freitag<br>
-        Abendtermine ab 18:00 Uhr online buchbar<br>
-        Samstag auf Anfrage möglich
-      </div>
-
-      <div class="time-card">
-        <strong>Alternative</strong><br>
-        Kurzes Kontaktformular für individuelle Anfragen integrieren.
-      </div>
+      <a href="termin.html" class="btn">Beratungstermin buchen</a>
     </div>
   </div>
 </section>
 
-<section class="final">
+<section class="cta">
   <div class="container">
-    <span class="eyebrow">Achtsam Wohnen</span>
-    <h2>Gesund schlafen. Natürlich wohnen. Bewusst leben.</h2>
+    <span class="eyebrow">Lass uns sprechen</span>
+    <h2>Bereit für besseren Schlaf?</h2>
     <p>
-      Ich freue mich darauf, dich persönlich kennenzulernen und gemeinsam mit dir
-      den Weg zu besserem Schlaf und mehr Wohlbefinden zu gehen.
+      Ich freue mich darauf, dich kennenzulernen und gemeinsam mit dir herauszufinden,
+      was dein Schlaf wirklich braucht.
     </p>
-    <a href="#termin" class="btn">Jetzt Termin vereinbaren</a>
+    <a href="termin.html" class="btn">Jetzt Termin vereinbaren</a>
+    <a href="index.html" class="btn light">Zur Startseite</a>
   </div>
 </section>
 
@@ -645,7 +605,7 @@
 
 <footer>
   <div class="container">
-    © 2025 Achtsam Wohnen · Schlafberatung · Naturmaterialien · Grander Wasser
+    © 2025 Achtsam Wohnen · Tanja Eder · Schlafberatung · Naturmaterialien · Grander Wasser
   </div>
 </footer>
 
