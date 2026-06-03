@@ -1,477 +1,310 @@
 ```html
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Über mich | Achtsam Wohnen</title>
+<section class="about-page">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <section class="about-hero">
+    <div class="about-container">
+      <div class="about-label">Über mich</div>
 
-  <style>
-    :root {
-      --cream: #f7f2ea;
-      --white: #ffffff;
-      --sage: #6f7d65;
-      --olive: #3f4a38;
-      --sand: #e4d6c3;
-      --brown: #8a6f57;
-      --text: #2f302b;
-      --muted: #6d6a62;
-      --shadow: 0 22px 55px rgba(63, 74, 56, 0.12);
-      --radius: 28px;
-    }
+      <h1>Tanja Kneidinger</h1>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Inter", sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.75;
-    }
-
-    h1, h2, h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--olive);
-      line-height: 1.15;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
-
-    header {
-      padding: 28px 0;
-      background: rgba(247, 242, 234, 0.9);
-      backdrop-filter: blur(14px);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid rgba(63, 74, 56, 0.1);
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-family: "Playfair Display", serif;
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--olive);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      font-size: 0.95rem;
-      color: var(--sage);
-    }
-
-    .btn {
-      display: inline-flex;
-      padding: 14px 26px;
-      border-radius: 999px;
-      background: var(--olive);
-      color: var(--white);
-      font-weight: 600;
-      transition: 0.3s ease;
-    }
-
-    .btn:hover {
-      background: var(--sage);
-      transform: translateY(-2px);
-    }
-
-    .hero {
-      padding: 95px 0 80px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 18px;
-      color: var(--brown);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.75rem;
-      font-weight: 700;
-    }
-
-    h1 {
-      font-size: clamp(3rem, 6vw, 5.2rem);
-      margin-bottom: 26px;
-    }
-
-    .hero-text {
-      font-size: 1.15rem;
-      color: var(--muted);
-      max-width: 620px;
-      margin-bottom: 34px;
-    }
-
-    .photo-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: var(--shadow);
-      transform: rotate(1.5deg);
-    }
-
-    .photo {
-      min-height: 520px;
-      border-radius: 22px;
-      background:
-        linear-gradient(rgba(63, 74, 56, 0.08), rgba(63, 74, 56, 0.08)),
-        url("tanja-kneidinger.jpg") center/cover;
-    }
-
-    .photo-note {
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    section {
-      padding: 85px 0;
-    }
-
-    .white {
-      background: var(--white);
-    }
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 70px;
-      align-items: start;
-    }
-
-    .section-title h2 {
-      font-size: clamp(2.2rem, 4vw, 3.6rem);
-      margin-bottom: 18px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-    }
-
-    .text-block p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .quote {
-      margin-top: 28px;
-      padding: 30px;
-      background: var(--cream);
-      border-left: 4px solid var(--sage);
-      border-radius: 18px;
-      font-family: "Playfair Display", serif;
-      font-size: 1.55rem;
-      color: var(--olive);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 44px;
-    }
-
-    .card {
-      background: var(--cream);
-      padding: 32px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .card h3 {
-      font-size: 1.45rem;
-      margin-bottom: 12px;
-    }
-
-    .card p {
-      color: var(--muted);
-    }
-
-    .number {
-      width: 42px;
-      height: 42px;
-      background: var(--sand);
-      color: var(--olive);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 24px;
-      margin-top: 42px;
-    }
-
-    .gallery-img {
-      min-height: 360px;
-      border-radius: var(--radius);
-      background-size: cover;
-      background-position: center;
-      box-shadow: var(--shadow);
-    }
-
-    .gallery-img.one {
-      background-image: url("beratung-im-laden.jpg");
-    }
-
-    .gallery-img.two {
-      background-image: url("achtsam-wohnen-laden.jpg");
-    }
-
-    .cta {
-      text-align: center;
-      background: var(--olive);
-      color: var(--white);
-      padding: 85px 0;
-    }
-
-    .cta h2 {
-      color: var(--white);
-      font-size: clamp(2.3rem, 5vw, 4rem);
-      margin-bottom: 20px;
-    }
-
-    .cta p {
-      max-width: 620px;
-      margin: 0 auto 32px;
-      color: rgba(255,255,255,0.78);
-    }
-
-    .cta .btn {
-      background: var(--white);
-      color: var(--olive);
-    }
-
-    footer {
-      padding: 34px 0;
-      text-align: center;
-      background: #323b2d;
-      color: rgba(255,255,255,0.72);
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 900px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-grid,
-      .content-grid,
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .photo {
-        min-height: 420px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="container nav">
-    <a href="index.html" class="logo">Achtsam Wohnen</a>
-
-    <nav class="nav-links">
-      <a href="index.html">Startseite</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="gesund-schlafen.html">Gesund schlafen</a>
-      <a href="grander-wasser.html">Grander Wasser</a>
-      <a href="termin.html">Termin</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow">Über mich</span>
-      <h1>Ich bin Tanja Kneidinger.</h1>
-      <p class="hero-text">
-        Schlafspezialistin aus Leidenschaft, Zuhörerin aus Überzeugung
-        und Begleiterin für Menschen, die wieder erholsam schlafen möchten.
-      </p>
-      <a href="termin.html" class="btn">Persönlichen Termin vereinbaren</a>
-    </div>
-
-    <div class="photo-card">
-      <div class="photo"></div>
-      <p class="photo-note">Bildplatzhalter: persönliches Foto von Tanja im Laden oder bei der Beratung.</p>
-    </div>
-  </div>
-</section>
-
-<section class="white">
-  <div class="container content-grid">
-    <div class="section-title">
-      <span class="eyebrow">Meine Geschichte</span>
-      <h2>Aus Liebe zu gutem Schlaf und natürlichem Wohnen.</h2>
-    </div>
-
-    <div class="text-block">
-      <p>
-        Mit Achtsam Wohnen habe ich einen Ort geschaffen, an dem Menschen zur Ruhe kommen,
-        ehrlich beraten werden und Lösungen finden, die wirklich zu ihrem Leben passen.
-      </p>
-      <p>
-        Mein besonderer Fokus liegt auf gesundem Schlaf. Denn guter Schlaf ist die Grundlage
-        für Energie, Gesundheit und Lebensfreude. Wenn der Schlaf fehlt, spüren wir das oft
-        in vielen Bereichen unseres Lebens.
-      </p>
-      <p>
-        Deshalb nehme ich mir Zeit, höre genau zu und schaue gemeinsam mit dir auf deine
-        persönliche Situation.
+      <p class="about-lead">
+        Ich begleite Menschen auf dem Weg zu besserem Schlaf –
+        mit Ruhe, Erfahrung und einem offenen Ohr.
       </p>
 
-      <div class="quote">
-        „Ich höre zu. Ich begleite. Ich helfe dir, wieder gut zu schlafen.“
+      <div class="about-hero-image">
+        <img src="tanja-kneidinger-im-laden.jpg" alt="Tanja Kneidinger im Geschäft von Achtsam Wohnen">
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <div class="container">
-    <div class="section-title">
-      <span class="eyebrow">Ausbildung & Kompetenz</span>
-      <h2>Fachwissen mit persönlicher Erfahrung verbunden.</h2>
-      <p>
-        Meine Beratung vereint Schlafwissen, Naturmaterialien, ergonomisches Liegen
-        und ganzheitliches Wohlbefinden.
-      </p>
-    </div>
+  <section class="about-story">
+    <div class="about-container about-two-columns">
+      <div>
+        <span class="small-title">Persönliche Geschichte</span>
+        <h2>Warum mir guter Schlaf so wichtig ist</h2>
+      </div>
 
-    <div class="cards">
-      <div class="card">
-        <div class="number">01</div>
-        <h3>Schlafberatung</h3>
+      <div class="about-text">
         <p>
-          Individuelle Beratung rund um Schlafsysteme, Matratzen, Bettwaren
-          und gesundes Liegen.
+          Mit Achtsam Wohnen hat Tanja Kneidinger einen Ort geschaffen,
+          an dem Menschen nicht einfach ein Produkt kaufen, sondern
+          persönlich begleitet werden.
         </p>
-      </div>
-
-      <div class="card">
-        <div class="number">02</div>
-        <h3>Naturmaterialien</h3>
         <p>
-          Fokus auf hochwertige, natürliche und schadstofffreie Materialien
-          für ein gesundes Schlafumfeld.
+          Ihr Fokus liegt auf gesundem Schlaf, natürlichem Wohnen und
+          Lösungen, die wirklich zum Menschen passen. Denn erholsamer Schlaf
+          ist für sie die Grundlage für Gesundheit, Energie und Lebensqualität.
         </p>
-      </div>
-
-      <div class="card">
-        <div class="number">03</div>
-        <h3>Granderberaterin</h3>
         <p>
-          Zertifizierte Granderberaterin für persönliche Beratung rund um
-          Wasserbelebung und Wohlbefinden.
+          In ihrer Beratung nimmt sie sich bewusst Zeit, hört zu und betrachtet
+          die persönliche Situation jedes einzelnen Menschen.
         </p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="white">
-  <div class="container content-grid">
-    <div class="section-title">
-      <span class="eyebrow">Beratungsphilosophie</span>
+  <section class="about-qualifications">
+    <div class="about-container">
+      <span class="small-title">Ausbildung & Zertifizierungen</span>
+      <h2>Fachwissen, Erfahrung und natürliche Lösungen</h2>
+
+      <div class="qualification-list">
+        <div>
+          <strong>Schlafberatung</strong>
+          <p>Beratung zu gesundem Liegen, Schlafsystemen, Matratzen und Bettwaren.</p>
+        </div>
+
+        <div>
+          <strong>Natürliche Materialien</strong>
+          <p>Fokus auf hochwertige, schadstofffreie und natürliche Produkte.</p>
+        </div>
+
+        <div>
+          <strong>Zertifizierte Granderberaterin</strong>
+          <p>Kompetente Beratung rund um Grander Wasserbelebung und Wohlbefinden.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-philosophy">
+    <div class="about-container">
+      <span class="small-title">Beratungsphilosophie</span>
       <h2>Zuhören. Begleiten. Lösungen finden.</h2>
-    </div>
 
-    <div class="text-block">
-      <p>
-        Gute Beratung beginnt für mich nicht mit einem Produkt, sondern mit einem Gespräch.
-        Ich möchte verstehen, was dich beschäftigt, wie du schläfst und was du brauchst,
-        um dich wieder erholt zu fühlen.
-      </p>
-      <p>
-        Gemeinsam finden wir eine Lösung, die zu deinem Körper, deinem Alltag und deinem
-        Zuhause passt. Ohne Druck, ohne Hektik und mit ausreichend Zeit.
-      </p>
-      <p>
-        Mein Ziel ist, dich ehrlich und persönlich auf dem Weg zu besserem Schlaf zu begleiten.
-      </p>
+      <div class="philosophy-grid">
+        <div>
+          <h3>Zuhören</h3>
+          <p>
+            Gute Beratung beginnt mit einem ehrlichen Gespräch.
+            Tanja möchte verstehen, was dich beschäftigt und was dein Schlaf braucht.
+          </p>
+        </div>
+
+        <div>
+          <h3>Begleiten</h3>
+          <p>
+            Schritt für Schritt begleitet sie dich auf dem Weg zu mehr Schlafqualität,
+            Ruhe und Wohlbefinden.
+          </p>
+        </div>
+
+        <div>
+          <h3>Lösungen finden</h3>
+          <p>
+            Gemeinsam entsteht eine Empfehlung, die zu deinem Körper,
+            deinem Alltag und deinem Zuhause passt.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="about-gallery">
+    <div class="about-container">
+      <span class="small-title">Einblicke</span>
+      <h2>Beratung in ruhiger Atmosphäre</h2>
+
+      <div class="image-grid">
+        <img src="beratung-im-laden.jpg" alt="Beratung im Laden von Achtsam Wohnen">
+        <img src="liegeberatung-achtsam-wohnen.jpg" alt="Liegeberatung bei Achtsam Wohnen">
+      </div>
+    </div>
+  </section>
+
 </section>
 
-<section>
-  <div class="container">
-    <div class="section-title">
-      <span class="eyebrow">Einblicke</span>
-      <h2>Persönliche Beratung in ruhiger Atmosphäre.</h2>
-      <p>
-        Hier können später echte Fotos aus dem Laden, vom Beratungsbereich
-        oder vom Liegetest eingefügt werden.
-      </p>
-    </div>
+<style>
+  .about-page {
+    background: #f7f2ea;
+    color: #2f302b;
+    font-family: "Inter", Arial, sans-serif;
+  }
 
-    <div class="gallery">
-      <div class="gallery-img one"></div>
-      <div class="gallery-img two"></div>
-    </div>
-  </div>
-</section>
+  .about-container {
+    width: min(1080px, 90%);
+    margin: 0 auto;
+  }
 
-<section class="cta">
-  <div class="container">
-    <h2>Lass uns über deinen Schlaf sprechen.</h2>
-    <p>
-      Ich nehme mir Zeit für dich und freue mich darauf, dich persönlich kennenzulernen.
-    </p>
-    <a href="termin.html" class="btn">Termin vereinbaren</a>
-  </div>
-</section>
+  .about-hero {
+    padding: 120px 0 70px;
+    text-align: center;
+  }
 
-</main>
+  .about-label,
+  .small-title {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #8a6f57;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
 
-<footer>
-  <div class="container">
-    © 2025 Achtsam Wohnen · Tanja Kneidinger
-  </div>
-</footer>
+  .about-hero h1,
+  .about-story h2,
+  .about-qualifications h2,
+  .about-philosophy h2,
+  .about-gallery h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: #3f4a38;
+    font-weight: 600;
+    line-height: 1.1;
+  }
 
-</body>
-</html>
+  .about-hero h1 {
+    font-size: clamp(48px, 8vw, 92px);
+    margin: 0 0 22px;
+  }
+
+  .about-lead {
+    max-width: 680px;
+    margin: 0 auto 48px;
+    font-size: 22px;
+    line-height: 1.55;
+    color: #6d6a62;
+  }
+
+  .about-hero-image img {
+    width: 100%;
+    max-height: 620px;
+    object-fit: cover;
+    border-radius: 34px;
+    box-shadow: 0 24px 60px rgba(63, 74, 56, 0.14);
+  }
+
+  .about-story,
+  .about-qualifications,
+  .about-philosophy,
+  .about-gallery {
+    padding: 90px 0;
+  }
+
+  .about-story {
+    background: #ffffff;
+  }
+
+  .about-two-columns {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 80px;
+  }
+
+  h2 {
+    font-size: clamp(36px, 5vw, 58px);
+    margin: 0 0 24px;
+  }
+
+  .about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #6d6a62;
+    margin-bottom: 20px;
+  }
+
+  .qualification-list {
+    margin-top: 46px;
+    border-top: 1px solid rgba(63, 74, 56, 0.16);
+  }
+
+  .qualification-list div {
+    display: grid;
+    grid-template-columns: 0.45fr 1fr;
+    gap: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(63, 74, 56, 0.16);
+  }
+
+  .qualification-list strong {
+    font-family: "Playfair Display", Georgia, serif;
+    color: #3f4a38;
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  .qualification-list p {
+    margin: 0;
+    color: #6d6a62;
+    font-size: 17px;
+  }
+
+  .about-philosophy {
+    background: #3f4a38;
+    color: #ffffff;
+  }
+
+  .about-philosophy .small-title {
+    color: #e4d6c3;
+  }
+
+  .about-philosophy h2 {
+    color: #ffffff;
+  }
+
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-top: 46px;
+  }
+
+  .philosophy-grid div {
+    background: rgba(255,255,255,0.08);
+    padding: 34px;
+    border-radius: 28px;
+  }
+
+  .philosophy-grid h3 {
+    margin: 0 0 14px;
+    font-family: "Playfair Display", Georgia, serif;
+    color: #ffffff;
+    font-size: 28px;
+  }
+
+  .philosophy-grid p {
+    margin: 0;
+    color: rgba(255,255,255,0.76);
+  }
+
+  .about-gallery {
+    background: #ffffff;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 44px;
+  }
+
+  .image-grid img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(63, 74, 56, 0.12);
+  }
+
+  @media (max-width: 850px) {
+    .about-two-columns,
+    .qualification-list div,
+    .philosophy-grid,
+    .image-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-hero {
+      padding-top: 80px;
+    }
+
+    .about-story,
+    .about-qualifications,
+    .about-philosophy,
+    .about-gallery {
+      padding: 65px 0;
+    }
+  }
+</style>
 ```
