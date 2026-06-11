@@ -1,251 +1,1042 @@
 ```html
-<section class="subhero business-hero">
-  <div class="container subhero-grid">
-    <div>
-      <div class="eyebrow">Geschäftskunden</div>
-      <h1>Steuerberatung für Unternehmen, die sicher wachsen wollen.</h1>
-      <p class="lead">
-        Für Unternehmer, GmbH-Geschäftsführer, Freiberufler und mittelständische Betriebe:
-        Steuerberatung Patrick Lerbs schafft Klarheit in Buchhaltung, Jahresabschluss,
-        Steuererklärungen und unternehmerischen Entscheidungen.
-      </p>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <div class="hero-actions">
-        <a href="#kontakt" class="btn btn-primary">Beratung anfragen</a>
-        <a href="#leistungen" class="btn btn-secondary">Leistungen ansehen</a>
+  <title>Geschäftskunden | Steuerberatung Patrick Lerbs</title>
+  <meta name="description" content="Steuerberatung für Unternehmer, Geschäftsführer und Geschäftskunden. Professionelle Beratung, digitale Prozesse, Jahresabschlüsse, Finanzbuchhaltung, Lohnabrechnung und steuerliche Gestaltungsberatung." />
+
+  <style>
+    :root {
+      --navy: #0d2340;
+      --navy-light: #17375f;
+      --gold: #b89662;
+      --gold-light: #f3eadc;
+      --text: #4f5e6d;
+      --dark: #111827;
+      --soft: #f6f8fb;
+      --line: #e5eaf0;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(13, 35, 64, 0.10);
+      --radius: 26px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 850;
+      letter-spacing: -0.03em;
+      color: var(--navy);
+      line-height: 1.1;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 4px;
+      color: var(--gold);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 800;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 15px;
+      font-weight: 650;
+      color: #586779;
+    }
+
+    nav a:hover {
+      color: var(--navy);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: 0 14px 34px rgba(13, 35, 64, 0.18);
+    }
+
+    .btn-primary:hover {
+      background: #071a31;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--navy);
+      border-color: var(--line);
+    }
+
+    .btn-secondary:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      padding: 105px 0 90px;
+      background:
+        linear-gradient(90deg, #ffffff 0%, #ffffff 57%, #f6f8fb 57%, #f6f8fb 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--gold-light);
+      color: #8b6732;
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(43px, 5.7vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      color: var(--navy);
+      margin-bottom: 28px;
+      max-width: 820px;
+    }
+
+    .lead {
+      font-size: clamp(18px, 2vw, 21px);
+      color: var(--text);
+      max-width: 720px;
+      margin-bottom: 36px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      background: var(--white);
+      max-width: 780px;
+    }
+
+    .trust-item {
+      padding: 22px;
+      border-right: 1px solid var(--line);
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--navy);
+      font-size: 19px;
+      margin-bottom: 4px;
+    }
+
+    .trust-item span {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--gold), var(--navy));
+    }
+
+    .card-label {
+      color: var(--gold);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .hero-card h2 {
+      font-size: 34px;
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+
+    .hero-card p {
+      color: var(--text);
+      margin-bottom: 28px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .check-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--soft);
+      border-radius: 18px;
+      padding: 18px;
+      color: var(--text);
+    }
+
+    .check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    section {
+      padding: 96px 0;
+    }
+
+    .section-head {
+      max-width: 820px;
+      margin-bottom: 52px;
+    }
+
+    .section-kicker {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 14px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(34px, 4.2vw, 56px);
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+
+    .section-head p {
+      font-size: 19px;
+      color: var(--text);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 32px;
+      min-height: 330px;
+      transition: 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+      border-color: #d6bf98;
+    }
+
+    .number {
+      color: var(--gold);
+      font-weight: 900;
+      margin-bottom: 26px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      font-size: 25px;
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      margin-bottom: 14px;
+    }
+
+    .service-card p {
+      color: var(--text);
+    }
+
+    .soft-section {
+      background: var(--soft);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .sticky-card {
+      position: sticky;
+      top: 118px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      padding: 38px;
+      box-shadow: var(--shadow);
+    }
+
+    .sticky-card h2 {
+      color: var(--navy);
+      font-size: 42px;
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      margin-bottom: 18px;
+    }
+
+    .sticky-card p {
+      color: var(--text);
+    }
+
+    .content-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .content-item {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .content-item strong {
+      display: block;
+      color: var(--navy);
+      font-size: 22px;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .content-item p {
+      color: var(--text);
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .overview-item {
+      padding: 24px;
+      border-radius: 22px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      min-height: 150px;
+    }
+
+    .overview-item span {
+      display: block;
+      color: var(--gold);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .overview-item h3 {
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .why-card {
+      padding: 34px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .why-card h3 {
+      color: var(--navy);
+      font-size: 25px;
+      line-height: 1.16;
+      letter-spacing: -0.035em;
+      margin-bottom: 14px;
+    }
+
+    .why-card p {
+      color: var(--text);
+    }
+
+    .process {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .process .section-kicker {
+      color: #d9bd8d;
+    }
+
+    .process .section-head h2 {
+      color: var(--white);
+    }
+
+    .process .section-head p {
+      color: rgba(255,255,255,.74);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .process-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      padding: 34px;
+    }
+
+    .process-card span {
+      display: block;
+      color: #d9bd8d;
+      font-weight: 900;
+      margin-bottom: 22px;
+    }
+
+    .process-card h3 {
+      color: var(--white);
+      font-size: 25px;
+      line-height: 1.16;
+      letter-spacing: -0.035em;
+      margin-bottom: 12px;
+    }
+
+    .process-card p {
+      color: rgba(255,255,255,.74);
+    }
+
+    .cta {
+      background: var(--soft);
+    }
+
+    .cta-box {
+      background:
+        linear-gradient(135deg, rgba(13,35,64,.97), rgba(23,55,95,.94));
+      color: var(--white);
+      border-radius: 36px;
+      padding: 64px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 56px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2 {
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      margin-bottom: 18px;
+    }
+
+    .cta-box p {
+      color: rgba(255,255,255,.76);
+      font-size: 19px;
+      margin-bottom: 30px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 28px;
+      padding: 32px;
+    }
+
+    .contact-line {
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255,255,255,.13);
+    }
+
+    .contact-line:last-child {
+      border-bottom: none;
+    }
+
+    .contact-line strong {
+      display: block;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .contact-line span,
+    .contact-line a {
+      color: rgba(255,255,255,.76);
+    }
+
+    footer {
+      background: #081522;
+      color: rgba(255,255,255,.64);
+      padding: 34px 0;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1050px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        background: var(--white);
+      }
+
+      .hero-grid,
+      .split,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .services,
+      .why-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sticky-card {
+        position: static;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav {
+        height: 76px;
+      }
+
+      .nav .btn {
+        display: none;
+      }
+
+      .brand {
+        font-size: 17px;
+      }
+
+      .trust-row,
+      .services,
+      .why-grid,
+      .process-grid,
+      .overview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .trust-item:last-child {
+        border-bottom: none;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+
+      .cta-box {
+        padding: 38px 24px;
+        border-radius: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="/" class="brand">
+      Steuerberatung Patrick Lerbs
+      <span>Dipl. Finanzwirt · Steuerberater</span>
+    </a>
+
+    <nav>
+      <a href="/">Startseite</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#beratung">Beratung</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a href="#kontakt" class="btn btn-primary">Termin vereinbaren</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Geschäftskunden</div>
+
+        <h1>Steuerberatung für Unternehmer, Geschäftsführer und Unternehmen mit Anspruch.</h1>
+
+        <p class="lead">
+          Steuern sind mehr als Pflichterfüllung. Wer unternehmerische Entscheidungen trifft,
+          benötigt einen Berater, der Zusammenhänge erkennt, Risiken frühzeitig bewertet und
+          steuerliche Gestaltungsmöglichkeiten aktiv aufzeigt.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-primary">Erstgespräch vereinbaren</a>
+          <a href="#leistungen" class="btn btn-secondary">Leistungen ansehen</a>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-item">
+            <strong>Unternehmerfokus</strong>
+            <span>Für GmbHs, Geschäftsführer und Geschäftskunden.</span>
+          </div>
+          <div class="trust-item">
+            <strong>Vorausschauend</strong>
+            <span>Steuerliche Auswirkungen frühzeitig erkennen.</span>
+          </div>
+          <div class="trust-item">
+            <strong>Digital</strong>
+            <span>Moderne Zusammenarbeit mit klaren Prozessen.</span>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <aside class="hero-panel">
-      <div class="panel-inner">
-        <div class="panel-label">Für Unternehmen</div>
+      <aside class="hero-card">
+        <div class="card-label">Strategische Steuerberatung</div>
         <h2>Steuern planbar machen. Entscheidungen sicher treffen.</h2>
         <p>
           Gute Steuerberatung endet nicht bei Zahlen. Sie unterstützt Sie dabei,
-          Risiken frühzeitig zu erkennen, Gestaltungsspielräume zu nutzen und Ihr
-          Unternehmen wirtschaftlich sauber aufzustellen.
+          Ihr Unternehmen steuerlich sauber aufzustellen, Risiken zu reduzieren
+          und wirtschaftliche Entscheidungen fundiert vorzubereiten.
         </p>
 
-        <div class="info-list">
-          <div><span class="check">✓</span><span>Finanzbuchhaltung und Lohnabrechnung</span></div>
-          <div><span class="check">✓</span><span>Jahresabschlüsse für Einzelunternehmen, Personen- und Kapitalgesellschaften</span></div>
-          <div><span class="check">✓</span><span>Steuererklärungen, Rechtsformwahl und Gestaltungsberatung</span></div>
+        <div class="check-list">
+          <div class="check-item">
+            <span class="check">✓</span>
+            <span>Laufende steuerliche Betreuung für Unternehmen und GmbHs</span>
+          </div>
+          <div class="check-item">
+            <span class="check">✓</span>
+            <span>Finanzbuchhaltung, Lohnabrechnung, Jahresabschlüsse und Steuererklärungen</span>
+          </div>
+          <div class="check-item">
+            <span class="check">✓</span>
+            <span>Gestaltungsberatung, Rechtsformwahl und Unternehmensstrukturierung</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="leistungen">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Leistungsspektrum</div>
+        <h2>Steuerliche Betreuung, die Ihr Unternehmen zuverlässig entlastet.</h2>
+        <p>
+          Von der laufenden Buchhaltung bis zur strategischen Beratung begleitet Patrick Lerbs
+          Geschäftskunden mit Fachkompetenz, Sorgfalt und einem klaren Blick für unternehmerische
+          Zusammenhänge.
+        </p>
+      </div>
+
+      <div class="services">
+        <article class="service-card">
+          <div class="number">01</div>
+          <h3>Laufende Steuerberatung</h3>
+          <p>
+            Betreuung Ihrer laufenden steuerlichen Pflichten, Erstellung betrieblicher
+            Steuererklärungen und zuverlässige Begleitung durch das Steuerjahr.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="number">02</div>
+          <h3>Finanzbuchhaltung</h3>
+          <p>
+            Strukturierte Buchhaltung als Grundlage für aussagekräftige Auswertungen,
+            wirtschaftliche Entscheidungen und steuerliche Sicherheit.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="number">03</div>
+          <h3>Lohnabrechnung</h3>
+          <p>
+            Professionelle Lohn- und Gehaltsabrechnung mit Blick auf Sorgfalt, Fristen,
+            Meldepflichten und korrekte steuerliche Behandlung.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="number">04</div>
+          <h3>Jahresabschlüsse</h3>
+          <p>
+            Erstellung von Jahresabschlüssen für Einzelunternehmen, Personengesellschaften
+            und Kapitalgesellschaften.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="number">05</div>
+          <h3>Gestaltungsberatung</h3>
+          <p>
+            Vorausschauende Beratung zu Unternehmensstrukturierung, steuerlicher Optimierung,
+            Investitionen und langfristiger Planung.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="number">06</div>
+          <h3>Digitale Zusammenarbeit</h3>
+          <p>
+            Effiziente digitale Prozesse für Belege, Kommunikation und Auswertungen —
+            transparent, zeitgemäß und ortsunabhängig.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="beratung" class="soft-section">
+    <div class="container split">
+      <div class="sticky-card">
+        <h2>Mehr als Buchhaltung. Beratung mit unternehmerischem Blick.</h2>
+        <p>
+          Unternehmen benötigen einen Steuerberater, der nicht nur Fristen und Formulare im Blick hat,
+          sondern steuerliche Themen verständlich einordnet und wirtschaftliche Entscheidungen begleitet.
+          Genau hier setzt die Beratung von Patrick Lerbs an.
+        </p>
+      </div>
+
+      <div class="content-list">
+        <div class="content-item">
+          <strong>Rechtsformwahl und Struktur</strong>
+          <p>
+            Ob Einzelunternehmen, Personengesellschaft oder GmbH: Die passende Struktur hat
+            erhebliche Auswirkungen auf Steuern, Haftung, Liquidität und zukünftige Gestaltungsmöglichkeiten.
+          </p>
+        </div>
+
+        <div class="content-item">
+          <strong>Investitionsentscheidungen</strong>
+          <p>
+            Geplante Anschaffungen, Wachstumsschritte oder größere Investitionen werden steuerlich
+            eingeordnet, damit Entscheidungen wirtschaftlich tragfähig vorbereitet werden können.
+          </p>
+        </div>
+
+        <div class="content-item">
+          <strong>Unternehmensentwicklung</strong>
+          <p>
+            Mit einer vorausschauenden steuerlichen Begleitung lassen sich Risiken reduzieren,
+            Liquidität besser planen und Gestaltungsspielräume frühzeitig nutzen.
+          </p>
+        </div>
+
+        <div class="content-item">
+          <strong>Kommunikation mit Finanzbehörden</strong>
+          <p>
+            Patrick Lerbs bringt Erfahrung aus der Finanzverwaltung mit und versteht, wie steuerliche
+            Sachverhalte dort geprüft, bewertet und eingeordnet werden.
+          </p>
         </div>
       </div>
-    </aside>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Übersicht</div>
+        <h2>Typische Themen für Geschäftskunden.</h2>
+        <p>
+          Die Zusammenarbeit kann je nach Unternehmen unterschiedliche Schwerpunkte haben.
+          Im Mittelpunkt steht immer eine verlässliche und verständliche steuerliche Betreuung.
+        </p>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-item">
+          <span>01</span>
+          <h3>Finanzbuchhaltung</h3>
+        </div>
+        <div class="overview-item">
+          <span>02</span>
+          <h3>Lohnabrechnung</h3>
+        </div>
+        <div class="overview-item">
+          <span>03</span>
+          <h3>Jahresabschluss</h3>
+        </div>
+        <div class="overview-item">
+          <span>04</span>
+          <h3>Steuererklärungen</h3>
+        </div>
+        <div class="overview-item">
+          <span>05</span>
+          <h3>Betriebsprüfungen</h3>
+        </div>
+        <div class="overview-item">
+          <span>06</span>
+          <h3>Unternehmensberatung</h3>
+        </div>
+        <div class="overview-item">
+          <span>07</span>
+          <h3>Gestaltungsberatung</h3>
+        </div>
+        <div class="overview-item">
+          <span>08</span>
+          <h3>Rechtsformwahl</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft-section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Warum Patrick Lerbs?</div>
+        <h2>Fachliche Tiefe, klare Kommunikation und ein Blick für das Wesentliche.</h2>
+        <p>
+          Die Beratung richtet sich an Unternehmer und Geschäftsführer, die Wert auf Professionalität,
+          Ehrlichkeit und eine langfristig verlässliche Zusammenarbeit legen.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <article class="why-card">
+          <h3>Erfahrung aus zwei Perspektiven</h3>
+          <p>
+            Als ehemaliger Beamter der Finanzverwaltung kennt Patrick Lerbs nicht nur die Sicht
+            der Mandanten, sondern auch die Denkweise und Abläufe der Finanzbehörden.
+          </p>
+        </article>
+
+        <article class="why-card">
+          <h3>Dozent im Steuerrecht</h3>
+          <p>
+            Steuerrechtliche Inhalte werden nicht nur angewendet, sondern regelmäßig vermittelt.
+            Das sorgt für fachliche Aktualität und verständliche Beratung.
+          </p>
+        </article>
+
+        <article class="why-card">
+          <h3>Vorausschauende Beratung</h3>
+          <p>
+            Ziel ist es, steuerliche Auswirkungen frühzeitig zu erkennen, Optionen abzuwägen
+            und Entscheidungen nicht erst im Nachhinein zu korrigieren.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Ablauf</div>
+        <h2>Klare Struktur vom ersten Gespräch bis zur laufenden Betreuung.</h2>
+        <p>
+          Die Zusammenarbeit beginnt mit einem klaren Verständnis Ihrer Situation und entwickelt
+          daraus eine Betreuung, die zu Ihrem Unternehmen passt.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-card">
+          <span>Schritt 1</span>
+          <h3>Ausgangslage verstehen</h3>
+          <p>
+            Unternehmen, Struktur, steuerliche Themen und Ziele werden gemeinsam eingeordnet.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <span>Schritt 2</span>
+          <h3>Prioritäten festlegen</h3>
+          <p>
+            Laufende Pflichten, Risiken und Gestaltungsmöglichkeiten werden transparent priorisiert.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <span>Schritt 3</span>
+          <h3>Digital betreuen</h3>
+          <p>
+            Die weitere Zusammenarbeit erfolgt strukturiert, zuverlässig und auf Wunsch weitgehend digital.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <h2>Lassen Sie uns über Ihr Unternehmen sprechen.</h2>
+          <p>
+            Ob GmbH, Familienunternehmen, Freiberufler oder wachsender Mittelstand:
+            Gemeinsam schaffen wir steuerliche Klarheit und eine solide Grundlage für
+            unternehmerische Entscheidungen.
+          </p>
+
+          <a href="mailto:lerbs@stblerbs.com" class="btn btn-primary">Erstgespräch vereinbaren</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-line">
+            <strong>Steuerberatung Patrick Lerbs</strong>
+            <span>Kapping 40<br>94474 Vilshofen an der Donau</span>
+          </div>
+
+          <div class="contact-line">
+            <strong>Telefon</strong>
+            <a href="tel:+491718020140">+49 171 80 20 140</a>
+          </div>
+
+          <div class="contact-line">
+            <strong>E-Mail</strong>
+            <a href="mailto:lerbs@stblerbs.com">lerbs@stblerbs.com</a>
+          </div>
+
+          <div class="contact-line">
+            <strong>Öffnungszeiten</strong>
+            <span>
+              Mo–Mi: 08:00–18:00 Uhr<br>
+              Do–Fr: 08:00–15:00 Uhr<br>
+              Termine nach Vereinbarung
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <p>© Steuerberatung Patrick Lerbs</p>
+    <p>Impressum · Datenschutz</p>
   </div>
-</section>
+</footer>
 
-<section id="leistungen">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-kicker">Leistungsspektrum</div>
-      <h2>Alles, was Ihr Unternehmen steuerlich zuverlässig braucht.</h2>
-      <p>
-        Von der laufenden Buchhaltung bis zur steuerlichen Gestaltung: Die Kanzlei
-        begleitet Geschäftskunden mit professioneller Beratung, digitalen Abläufen
-        und einem klaren Blick auf langfristigen Unternehmenserfolg.
-      </p>
-    </div>
-
-    <div class="services">
-      <article class="service">
-        <div class="number">01</div>
-        <h3>Finanzbuchhaltung</h3>
-        <p>
-          Strukturierte Erstellung Ihrer Finanzbuchhaltung als verlässliche Grundlage
-          für Auswertungen, Entscheidungen und steuerliche Pflichten.
-        </p>
-      </article>
-
-      <article class="service">
-        <div class="number">02</div>
-        <h3>Lohnabrechnung</h3>
-        <p>
-          Professionelle Erstellung von Lohn- und Gehaltsabrechnungen mit Blick auf
-          Sorgfalt, Fristen und korrekte steuerliche Behandlung.
-        </p>
-      </article>
-
-      <article class="service">
-        <div class="number">03</div>
-        <h3>Jahresabschlüsse</h3>
-        <p>
-          Erstellung von Jahresabschlüssen für Einzelunternehmen, Personengesellschaften
-          und Kapitalgesellschaften.
-        </p>
-      </article>
-
-      <article class="service">
-        <div class="number">04</div>
-        <h3>Steuererklärungen</h3>
-        <p>
-          Erstellung betrieblicher Steuererklärungen und Begleitung bei laufenden
-          steuerlichen Anforderungen.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="soft-section">
-  <div class="container split">
-    <div class="profile-card">
-      <h3>Beratung mit unternehmerischem Blick.</h3>
-      <p>
-        Ob Investition, Rechtsformwahl, Unternehmensstruktur oder laufende steuerliche
-        Betreuung: Geschäftskunden brauchen mehr als reine Pflichterfüllung.
-        Sie brauchen einen Ansprechpartner, der steuerliche Themen verständlich
-        einordnet und wirtschaftliche Zusammenhänge mitdenkt.
-      </p>
-    </div>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <strong>Analyse der aktuellen Situation</strong>
-        <p>
-          Zu Beginn steht eine gründliche Betrachtung Ihrer steuerlichen und
-          unternehmerischen Ausgangslage. So entsteht eine belastbare Grundlage
-          für die weitere Beratung.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <strong>Passende Strategie entwickeln</strong>
-        <p>
-          Auf Basis Ihrer Ziele werden sinnvolle steuerliche Maßnahmen,
-          Gestaltungsmöglichkeiten und nächste Schritte definiert.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <strong>Laufende Betreuung sicherstellen</strong>
-        <p>
-          Die Kanzlei begleitet Sie zuverlässig bei Buchhaltung, Lohn, Abschlüssen,
-          Erklärungen und steuerlichen Fragen im Geschäftsalltag.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-head">
-      <div class="section-kicker">Beratungsthemen</div>
-      <h2>Für steuerliche Fragen, die über den Alltag hinausgehen.</h2>
-      <p>
-        Neben den klassischen Steuerleistungen unterstützt Patrick Lerbs Unternehmen
-        auch bei strukturellen und strategischen Fragen.
-      </p>
-    </div>
-
-    <div class="values-grid">
-      <article class="value-card">
-        <h3>Rechtsformwahl</h3>
-        <p>
-          Beratung zur steuerlich sinnvollen Rechtsform — insbesondere bei Gründung,
-          Umstrukturierung oder Wachstum.
-        </p>
-      </article>
-
-      <article class="value-card">
-        <h3>Investitionen</h3>
-        <p>
-          Steuerliche Einordnung geplanter Investitionen, damit Entscheidungen
-          wirtschaftlich und steuerlich tragfähig vorbereitet werden.
-        </p>
-      </article>
-
-      <article class="value-card">
-        <h3>Immobilien</h3>
-        <p>
-          Unterstützung bei steuerlichen Fragen rund um Kauf, Verkauf und betriebliche
-          Nutzung von Immobilien.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="process-section">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-kicker">Warum Patrick Lerbs?</div>
-      <h2>Professionell, ehrlich und auf nachhaltigen Erfolg ausgerichtet.</h2>
-      <p>
-        Die Zusammenarbeit mit Geschäftskunden basiert auf Transparenz, Verlässlichkeit
-        und dem Anspruch, steuerliche Themen nicht nur korrekt, sondern vorausschauend
-        zu lösen.
-      </p>
-    </div>
-
-    <div class="process-grid">
-      <article class="process-card">
-        <span>01</span>
-        <h3>Klare Orientierung</h3>
-        <p>
-          Sie erhalten verständliche Einschätzungen statt komplizierter Fachsprache.
-        </p>
-      </article>
-
-      <article class="process-card">
-        <span>02</span>
-        <h3>Digitale Zusammenarbeit</h3>
-        <p>
-          Prozesse können effizient und modern organisiert werden — passend zu Ihrem Unternehmen.
-        </p>
-      </article>
-
-      <article class="process-card">
-        <span>03</span>
-        <h3>Langfristige Betreuung</h3>
-        <p>
-          Ziel ist nicht nur das nächste Steuerjahr, sondern der nachhaltige Erfolg Ihres Unternehmens.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="kontakt" class="cta">
-  <div class="container cta-grid">
-    <div>
-      <h2>Sie möchten Ihre steuerlichen Themen professionell aufstellen?</h2>
-      <p>
-        Vereinbaren Sie einen Termin nach Absprache. Steuerberatung Patrick Lerbs
-        unterstützt Geschäftskunden in Vilshofen an der Donau, Passau und Umgebung
-        sowie digital.
-      </p>
-
-      <a href="mailto:lerbs@stblerbs.com" class="btn btn-primary">Beratung anfragen</a>
-    </div>
-
-    <div class="contact-card">
-      <div class="contact-line">
-        <strong>Steuerberatung Patrick Lerbs</strong>
-        <span>Kapping 40<br>94474 Vilshofen an der Donau</span>
-      </div>
-
-      <div class="contact-line">
-        <strong>Telefon</strong>
-        <a href="tel:+491718020140">+49 171 80 20 140</a>
-      </div>
-
-      <div class="contact-line">
-        <strong>E-Mail</strong>
-        <a href="mailto:lerbs@stblerbs.com">lerbs@stblerbs.com</a>
-      </div>
-
-      <div class="contact-line">
-        <strong>Öffnungszeiten</strong>
-        <span>
-          Mo–Mi: 08:00–18:00 Uhr<br>
-          Do–Fr: 08:00–15:00 Uhr<br>
-          Termine nach Vereinbarung
-        </span>
-      </div>
-    </div>
-  </div>
-</section>
+</body>
+</html>
 ```
