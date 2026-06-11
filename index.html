@@ -4,366 +4,304 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Steuerberatung Patrick Lerbs | Digitale Steuerberatung für Unternehmer</title>
+
+  <title>Steuerberatung Patrick Lerbs | Steuerberater für Unternehmer & GmbHs</title>
+  <meta name="description" content="Steuerberatung Patrick Lerbs in Vilshofen: Vorausschauende, digitale und professionelle Steuerberatung für Unternehmer, GmbH-Geschäftsführer und Geschäftskunden." />
 
   <style>
     :root {
-      --dark: #050b14;
-      --dark-2: #081522;
-      --blue: #4cc9f0;
-      --blue-2: #4361ee;
+      --ink: #102033;
+      --blue: #173b63;
+      --gold: #b8945f;
+      --soft: #f6f8fa;
+      --line: #e4e9ef;
+      --text: #4f5f70;
       --white: #ffffff;
-      --text: #d9e6f2;
-      --muted: #91a4b7;
-      --card: rgba(255,255,255,.08);
-      --border: rgba(255,255,255,.14);
-      --radius: 30px;
-      --shadow: 0 30px 90px rgba(0,0,0,.35);
+      --shadow: 0 24px 70px rgba(16, 32, 51, 0.10);
+      --radius: 26px;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
-      font-family: Inter, "Segoe UI", system-ui, sans-serif;
-      background: var(--dark);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.65;
     }
 
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1200px, 92%); margin: auto; }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(circle at 20% 10%, rgba(67,97,238,.32), transparent 28%),
-        radial-gradient(circle at 85% 5%, rgba(76,201,240,.28), transparent 30%),
-        radial-gradient(circle at 70% 80%, rgba(67,97,238,.18), transparent 34%),
-        linear-gradient(180deg, #050b14 0%, #07111d 100%);
-      z-index: -2;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-      background-size: 52px 52px;
-      mask-image: linear-gradient(to bottom, black, transparent 75%);
-      z-index: -1;
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
     }
 
     header {
-      position: fixed;
-      top: 18px;
-      left: 0;
-      right: 0;
-      z-index: 100;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
     }
 
     .nav {
-      height: 74px;
-      padding: 0 22px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: rgba(5,11,20,.68);
-      backdrop-filter: blur(24px);
+      height: 84px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 20px 70px rgba(0,0,0,.25);
+      gap: 32px;
     }
 
     .brand {
-      font-weight: 850;
-      letter-spacing: -.04em;
-      color: var(--white);
+      font-weight: 800;
       font-size: 20px;
+      letter-spacing: -.03em;
+      color: var(--ink);
     }
 
     .brand span {
-      color: var(--blue);
+      display: block;
+      font-size: 12px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin-top: 2px;
     }
 
     nav {
       display: flex;
-      gap: 28px;
-      font-size: 14px;
-      color: var(--muted);
+      gap: 30px;
+      font-size: 15px;
       font-weight: 650;
+      color: #566779;
     }
 
-    nav a:hover { color: var(--white); }
+    nav a:hover {
+      color: var(--blue);
+    }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 50px;
-      padding: 0 24px;
+      padding: 14px 23px;
       border-radius: 999px;
-      font-weight: 800;
+      font-weight: 750;
       transition: .25s ease;
       border: 1px solid transparent;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--blue), var(--blue-2));
-      color: #fff;
-      box-shadow: 0 20px 50px rgba(76,201,240,.24);
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 14px 34px rgba(23,59,99,.18);
     }
 
     .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 26px 70px rgba(76,201,240,.34);
+      background: #102f51;
+      transform: translateY(-2px);
     }
 
     .btn-secondary {
-      border-color: var(--border);
-      background: rgba(255,255,255,.06);
-      color: var(--white);
+      background: var(--white);
+      color: var(--blue);
+      border-color: var(--line);
     }
 
     .btn-secondary:hover {
-      background: rgba(255,255,255,.12);
-      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
     }
 
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 150px 0 90px;
-      position: relative;
+      padding: 100px 0 84px;
+      background:
+        linear-gradient(90deg, #ffffff 0%, #ffffff 54%, #f4f7fa 54%, #f4f7fa 100%);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: 1.08fr .92fr;
       gap: 70px;
       align-items: center;
     }
 
-    .badge {
+    .eyebrow {
       display: inline-flex;
-      gap: 10px;
-      align-items: center;
-      padding: 9px 15px;
-      border: 1px solid var(--border);
+      padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,.06);
-      color: var(--blue);
-      font-weight: 800;
+      background: #f5efe6;
+      color: #8b6732;
       font-size: 13px;
-      text-transform: uppercase;
+      font-weight: 800;
       letter-spacing: .08em;
-      margin-bottom: 28px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
     }
 
     h1 {
-      font-size: clamp(52px, 7vw, 96px);
-      line-height: .88;
-      letter-spacing: -.075em;
-      color: var(--white);
-      margin-bottom: 30px;
-      max-width: 850px;
+      font-size: clamp(43px, 5.8vw, 74px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      color: var(--ink);
+      margin-bottom: 28px;
     }
 
-    h1 span {
-      background: linear-gradient(135deg, var(--blue), #ffffff);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero-text {
-      font-size: clamp(18px, 2vw, 22px);
-      color: var(--muted);
-      max-width: 720px;
-      margin-bottom: 38px;
+    .lead {
+      font-size: clamp(18px, 2vw, 21px);
+      color: var(--text);
+      max-width: 690px;
+      margin-bottom: 34px;
     }
 
     .hero-actions {
       display: flex;
-      gap: 16px;
+      gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 46px;
+      margin-bottom: 42px;
     }
 
-    .proof {
+    .trust-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      max-width: 760px;
-    }
-
-    .proof-item {
-      padding: 20px;
-      border: 1px solid var(--border);
+      border: 1px solid var(--line);
       border-radius: 22px;
-      background: rgba(255,255,255,.055);
-      backdrop-filter: blur(18px);
-    }
-
-    .proof-item strong {
-      display: block;
-      color: var(--white);
-      font-size: 21px;
-      letter-spacing: -.04em;
-    }
-
-    .proof-item small {
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    .hero-card {
-      position: relative;
-      min-height: 640px;
-      border-radius: 42px;
-      background:
-        linear-gradient(145deg, rgba(255,255,255,.16), rgba(255,255,255,.04));
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
       overflow: hidden;
-      padding: 28px;
-      backdrop-filter: blur(28px);
+      max-width: 760px;
+      background: var(--white);
     }
 
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      width: 360px;
-      height: 360px;
-      right: -120px;
-      top: -120px;
-      background: radial-gradient(circle, rgba(76,201,240,.58), transparent 62%);
-      filter: blur(6px);
-    }
-
-    .status-card {
-      position: relative;
-      z-index: 2;
-      padding: 28px;
-      border-radius: 30px;
-      background: rgba(5,11,20,.74);
-      border: 1px solid var(--border);
-      margin-bottom: 22px;
-    }
-
-    .status-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 28px;
-    }
-
-    .status-dot {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      color: #8ef6c9;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .status-dot::before {
-      content: "";
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #8ef6c9;
-      box-shadow: 0 0 0 7px rgba(142,246,201,.12);
-    }
-
-    .big-number {
-      font-size: 64px;
-      line-height: 1;
-      color: var(--white);
-      letter-spacing: -.07em;
-      margin-bottom: 8px;
-      font-weight: 900;
-    }
-
-    .status-card p { color: var(--muted); }
-
-    .mini-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .mini-card {
+    .trust-item {
       padding: 22px;
-      min-height: 150px;
-      border-radius: 26px;
-      background: rgba(255,255,255,.08);
-      border: 1px solid var(--border);
+      border-right: 1px solid var(--line);
     }
 
-    .mini-card b {
+    .trust-item:last-child {
+      border-right: 0;
+    }
+
+    .trust-item strong {
       display: block;
-      color: var(--white);
-      font-size: 28px;
-      margin-bottom: 8px;
-      letter-spacing: -.05em;
+      font-size: 19px;
+      color: var(--ink);
+      margin-bottom: 4px;
     }
 
-    .profile {
+    .trust-item span {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .hero-panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .hero-panel::before {
+      content: "";
       position: absolute;
-      left: 28px;
-      right: 28px;
-      bottom: 28px;
-      z-index: 3;
-      padding: 28px;
-      border-radius: 30px;
-      background: linear-gradient(135deg, rgba(76,201,240,.94), rgba(67,97,238,.94));
-      color: var(--white);
-      box-shadow: 0 26px 70px rgba(0,0,0,.28);
+      inset: 22px;
+      border: 1px solid #edf1f5;
+      border-radius: 26px;
+      pointer-events: none;
     }
 
-    .profile h3 {
-      font-size: 30px;
-      letter-spacing: -.05em;
-      margin-bottom: 6px;
+    .panel-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .panel-label {
+      color: var(--gold);
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    .hero-panel h2 {
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: -.04em;
+      margin-bottom: 18px;
+    }
+
+    .hero-panel p {
+      color: var(--text);
+      margin-bottom: 26px;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .info-list div {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 18px;
+      background: var(--soft);
+      border-radius: 18px;
+      color: var(--text);
+    }
+
+    .check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      font-size: 13px;
+      font-weight: 900;
     }
 
     section {
-      padding: 110px 0;
+      padding: 92px 0;
     }
 
-    .section-title {
-      max-width: 850px;
-      margin-bottom: 54px;
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 50px;
     }
 
-    .section-title .kicker {
-      color: var(--blue);
-      font-weight: 900;
+    .section-kicker {
+      color: var(--gold);
+      font-weight: 850;
       text-transform: uppercase;
-      letter-spacing: .12em;
+      letter-spacing: .13em;
       font-size: 13px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
-    .section-title h2 {
-      color: var(--white);
-      font-size: clamp(38px, 5vw, 68px);
-      line-height: .95;
-      letter-spacing: -.065em;
-      margin-bottom: 20px;
+    .section-head h2 {
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.06;
+      letter-spacing: -.045em;
+      margin-bottom: 18px;
     }
 
-    .section-title p {
-      color: var(--muted);
+    .section-head p {
+      color: var(--text);
       font-size: 19px;
-      max-width: 720px;
     }
 
     .services {
@@ -373,184 +311,276 @@
     }
 
     .service {
-      position: relative;
-      min-height: 360px;
-      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: var(--card);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      transition: .3s ease;
+      padding: 30px;
+      min-height: 330px;
+      transition: .25s ease;
     }
 
     .service:hover {
-      transform: translateY(-8px);
-      background: rgba(255,255,255,.12);
+      transform: translateY(-6px);
       box-shadow: var(--shadow);
+      border-color: #d8c29f;
     }
 
-    .service::after {
-      content: "";
-      position: absolute;
-      inset: auto 24px 24px auto;
-      width: 86px;
-      height: 86px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, rgba(76,201,240,.35), rgba(67,97,238,.25));
-    }
-
-    .service span {
-      color: var(--blue);
+    .number {
+      color: var(--gold);
       font-weight: 900;
-      font-size: 14px;
+      margin-bottom: 24px;
     }
 
     .service h3 {
-      color: var(--white);
-      font-size: 28px;
-      line-height: 1.05;
-      letter-spacing: -.045em;
-      margin: 22px 0 16px;
-    }
-
-    .service p { color: var(--muted); }
-
-    .split {
-      display: grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 70px;
-      align-items: start;
-    }
-
-    .about-card {
-      position: sticky;
-      top: 120px;
-      padding: 38px;
-      border-radius: 38px;
-      background: linear-gradient(145deg, rgba(255,255,255,.14), rgba(255,255,255,.05));
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .about-card h3 {
-      color: var(--white);
-      font-size: 42px;
-      letter-spacing: -.06em;
-      line-height: .95;
+      font-size: 24px;
+      line-height: 1.18;
+      letter-spacing: -.03em;
       margin-bottom: 14px;
     }
 
-    .about-card p { color: var(--muted); }
+    .service p {
+      color: var(--text);
+    }
 
-    .timeline {
+    .soft-section {
+      background: var(--soft);
+    }
+
+    .split {
       display: grid;
-      gap: 18px;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 64px;
+      align-items: start;
     }
 
-    .timeline-item {
-      padding: 30px;
-      border-radius: 28px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid var(--border);
+    .profile-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      padding: 36px;
+      box-shadow: var(--shadow);
     }
 
-    .timeline-item b {
-      color: var(--blue);
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-    }
-
-    .timeline-item h4 {
-      color: var(--white);
-      font-size: 25px;
+    .profile-card h3 {
+      font-size: 36px;
+      line-height: 1.05;
       letter-spacing: -.04em;
       margin-bottom: 8px;
     }
 
-    .cta {
-      padding-bottom: 120px;
+    .role {
+      color: var(--gold);
+      font-weight: 800;
+      margin-bottom: 24px;
     }
 
-    .cta-box {
-      border-radius: 46px;
-      padding: 70px;
-      background:
-        radial-gradient(circle at 85% 20%, rgba(76,201,240,.34), transparent 30%),
-        linear-gradient(135deg, rgba(67,97,238,.95), rgba(5,11,20,.95));
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
+    .profile-card p {
+      color: var(--text);
+    }
+
+    .timeline {
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 50px;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+    }
+
+    .timeline-item strong {
+      display: block;
+      color: var(--ink);
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item p {
+      color: var(--text);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .value-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+
+    .value-card h3 {
+      font-size: 24px;
+      letter-spacing: -.03em;
+      margin-bottom: 12px;
+    }
+
+    .value-card p {
+      color: var(--text);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .process-card {
+      padding: 32px;
+      background: var(--blue);
+      color: var(--white);
+      border-radius: var(--radius);
+    }
+
+    .process-card:nth-child(2) {
+      background: #123252;
+    }
+
+    .process-card:nth-child(3) {
+      background: #0d263f;
+    }
+
+    .process-card span {
+      color: #d9bd8d;
+      font-weight: 900;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .process-card h3 {
+      font-size: 25px;
+      line-height: 1.15;
+      letter-spacing: -.03em;
+      margin-bottom: 12px;
+    }
+
+    .process-card p {
+      color: rgba(255,255,255,.78);
+    }
+
+    .cta {
+      padding: 0;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 60px;
       align-items: center;
+      padding: 82px 0;
     }
 
     .cta h2 {
-      color: var(--white);
-      font-size: clamp(40px, 5vw, 72px);
-      line-height: .92;
-      letter-spacing: -.07em;
-      margin-bottom: 22px;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+      margin-bottom: 20px;
     }
 
-    .cta p { color: rgba(255,255,255,.78); font-size: 19px; }
-
-    .contact {
-      padding: 30px;
-      border-radius: 30px;
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.18);
-      backdrop-filter: blur(20px);
+    .cta p {
+      color: rgba(255,255,255,.76);
+      font-size: 19px;
+      margin-bottom: 30px;
     }
 
-    .contact div {
+    .contact-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 28px;
+      padding: 32px;
+    }
+
+    .contact-line {
       padding: 15px 0;
-      border-bottom: 1px solid rgba(255,255,255,.14);
+      border-bottom: 1px solid rgba(255,255,255,.12);
     }
 
-    .contact div:last-child { border-bottom: 0; }
+    .contact-line:last-child {
+      border-bottom: 0;
+    }
 
-    .contact strong {
+    .contact-line strong {
       display: block;
       color: var(--white);
       margin-bottom: 4px;
     }
 
+    .contact-line span,
+    .contact-line a {
+      color: rgba(255,255,255,.76);
+    }
+
     footer {
-      border-top: 1px solid var(--border);
-      padding: 34px 0;
-      color: var(--muted);
+      padding: 32px 0;
+      background: #081522;
+      color: rgba(255,255,255,.62);
       font-size: 14px;
     }
 
     .footer-inner {
       display: flex;
       justify-content: space-between;
-      flex-wrap: wrap;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     @media (max-width: 1000px) {
-      nav { display: none; }
-      .hero-grid, .split, .cta-box { grid-template-columns: 1fr; }
-      .services { grid-template-columns: repeat(2, 1fr); }
-      .hero-card { min-height: 560px; }
-      .about-card { position: static; }
+      nav {
+        display: none;
+      }
+
+      .hero {
+        background: var(--white);
+      }
+
+      .hero-grid,
+      .split,
+      .cta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services,
+      .values-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 650px) {
-      header { top: 10px; }
-      .nav { height: 66px; }
-      .nav .btn { display: none; }
-      .brand { font-size: 17px; }
-      .hero { padding-top: 125px; }
-      .proof, .services, .mini-grid { grid-template-columns: 1fr; }
-      .hero-card { min-height: 720px; }
-      .cta-box { padding: 38px 24px; border-radius: 32px; }
-      section { padding: 80px 0; }
+      .nav .btn {
+        display: none;
+      }
+
+      .services,
+      .values-grid,
+      .process-grid,
+      .trust-row {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .trust-item:last-child {
+        border-bottom: 0;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
     }
   </style>
 </head>
@@ -559,14 +589,19 @@
 
 <header>
   <div class="container nav">
-    <a class="brand" href="#">Patrick <span>Lerbs</span></a>
+    <a href="#" class="brand">
+      Steuerberatung Patrick Lerbs
+      <span>Dipl. Finanzwirt · Steuerberater</span>
+    </a>
+
     <nav>
       <a href="#leistungen">Leistungen</a>
-      <a href="#profil">Profil</a>
-      <a href="#beratung">Beratung</a>
+      <a href="#kanzlei">Kanzlei</a>
+      <a href="#werte">Werte</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <a class="btn btn-primary" href="#kontakt">Termin anfragen</a>
+
+    <a href="#kontakt" class="btn btn-primary">Termin vereinbaren</a>
   </div>
 </header>
 
@@ -575,69 +610,57 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="badge">Digitale Steuerberatung · Vilshofen</div>
+        <div class="eyebrow">Digitale Steuerberatung für Unternehmer</div>
 
-        <h1>
-          Steuerberatung für Unternehmer, die <span>vorausdenken.</span>
-        </h1>
+        <h1>Steuerliche Klarheit für Unternehmen, Geschäftsführer und Entscheider.</h1>
 
-        <p class="hero-text">
-          Patrick Lerbs verbindet Erfahrung aus der Finanzverwaltung, steuerrechtliche Lehre und moderne digitale Prozesse zu einer Beratung, die nicht nur Zahlen verarbeitet — sondern unternehmerische Entscheidungen besser macht.
+        <p class="lead">
+          Steuerberatung Patrick Lerbs steht für vorausschauende, ehrliche und digital organisierte Steuerberatung. Der Fokus liegt auf Geschäftskunden, GmbH-Geschäftsführern und Unternehmern, die ihre steuerlichen Themen professionell, strukturiert und zukunftssicher lösen möchten.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#kontakt">Erstgespräch vereinbaren</a>
-          <a class="btn btn-secondary" href="#leistungen">Leistungen entdecken</a>
+          <a href="#kontakt" class="btn btn-primary">Erstgespräch anfragen</a>
+          <a href="#leistungen" class="btn btn-secondary">Leistungen ansehen</a>
         </div>
 
-        <div class="proof">
-          <div class="proof-item">
-            <strong>GmbH & GF</strong>
-            <small>Fokus auf Unternehmer</small>
+        <div class="trust-row">
+          <div class="trust-item">
+            <strong>Vorausschauend</strong>
+            <span>Steuerberatung mit Blick auf kommende Entscheidungen.</span>
           </div>
-          <div class="proof-item">
-            <strong>Volldigital</strong>
-            <small>moderne Zusammenarbeit</small>
+          <div class="trust-item">
+            <strong>Digital</strong>
+            <span>Effiziente Zusammenarbeit mit modernen Prozessen.</span>
           </div>
-          <div class="proof-item">
-            <strong>Dozent</strong>
-            <small>im Steuerrecht</small>
+          <div class="trust-item">
+            <strong>Fundiert</strong>
+            <span>Erfahrung aus Finanzverwaltung, Beratung und Lehre.</span>
           </div>
         </div>
       </div>
 
-      <aside class="hero-card">
-        <div class="status-card">
-          <div class="status-top">
-            <strong>Mandatsstrategie</strong>
-            <span class="status-dot">Aktiv</span>
-          </div>
-          <div class="big-number">360°</div>
-          <p>Steuern, Struktur, Prozesse und Zukunftsplanung in einer Beratung.</p>
-        </div>
+      <aside class="hero-panel">
+        <div class="panel-inner">
+          <div class="panel-label">Für Unternehmen</div>
+          <h2>Beratung, die nicht erst reagiert, wenn es zu spät ist.</h2>
+          <p>
+            Gute Steuerberatung bedeutet mehr als die fristgerechte Abgabe von Erklärungen. Sie schafft Orientierung, reduziert Risiken und unterstützt unternehmerische Entscheidungen.
+          </p>
 
-        <div class="mini-grid">
-          <div class="mini-card">
-            <b>01</b>
-            <p>Vorausschauende Steuerberatung</p>
+          <div class="info-list">
+            <div>
+              <span class="check">✓</span>
+              <span>Laufende steuerliche Betreuung für Unternehmen und GmbHs</span>
+            </div>
+            <div>
+              <span class="check">✓</span>
+              <span>Unternehmensstrukturierung und steuerliche Gestaltungsberatung</span>
+            </div>
+            <div>
+              <span class="check">✓</span>
+              <span>Digitale Prozesse für Buchhaltung, Austausch und Beratung</span>
+            </div>
           </div>
-          <div class="mini-card">
-            <b>02</b>
-            <p>Gestaltung & Unternehmensstruktur</p>
-          </div>
-          <div class="mini-card">
-            <b>03</b>
-            <p>Digitale Buchhaltung & Prozesse</p>
-          </div>
-          <div class="mini-card">
-            <b>04</b>
-            <p>Seminare, Vorträge & Schulungen</p>
-          </div>
-        </div>
-
-        <div class="profile">
-          <h3>Patrick Lerbs</h3>
-          <p>Dipl. Finanzwirt (FH) · Steuerberater · Dozent im Steuerrecht</p>
         </div>
       </aside>
     </div>
@@ -645,141 +668,189 @@
 
   <section id="leistungen">
     <div class="container">
-      <div class="section-title">
-        <div class="kicker">Leistungen</div>
-        <h2>Keine Steuerberatung von gestern. Sondern Klarheit für morgen.</h2>
+      <div class="section-head">
+        <div class="section-kicker">Leistungen</div>
+        <h2>Steuerberatung für Menschen, die Verantwortung tragen.</h2>
         <p>
-          Für Unternehmer, Geschäftsführer und Betriebe, die Wert auf Struktur, digitale Abläufe und professionelle steuerliche Entscheidungen legen.
+          Die Kanzlei betreut Unternehmen, Geschäftsführer und Selbstständige mit einem klaren Anspruch: steuerliche Pflichten zuverlässig erfüllen, Gestaltungsmöglichkeiten erkennen und Entscheidungen rechtzeitig vorbereiten.
         </p>
       </div>
 
       <div class="services">
         <article class="service">
-          <span>01</span>
-          <h3>Geschäfts- kunden</h3>
-          <p>Jahresabschlüsse, Steuererklärungen, Finanzbuchhaltung, Lohnbuchhaltung und laufende steuerliche Betreuung für Unternehmen.</p>
+          <div class="number">01</div>
+          <h3>Geschäftskunden & Unternehmen</h3>
+          <p>
+            Laufende steuerliche Betreuung, Jahresabschlüsse, Steuererklärungen, Finanzbuchhaltung und Lohnbuchhaltung für Unternehmen, GmbHs und unternehmerisch tätige Mandanten.
+          </p>
         </article>
 
         <article class="service">
-          <span>02</span>
-          <h3>Gestaltungs- beratung</h3>
-          <p>Beratung zu Unternehmensstrukturierung, Rechtsform, steuerlicher Optimierung und strategischen Weichenstellungen.</p>
+          <div class="number">02</div>
+          <h3>GmbH-Geschäftsführer</h3>
+          <p>
+            Beratung für Geschäftsführer, die steuerliche Entscheidungen nicht isoliert betrachten möchten — von laufenden Pflichten bis zu Struktur-, Vergütungs- und Gestaltungsthemen.
+          </p>
         </article>
 
         <article class="service">
-          <span>03</span>
-          <h3>Seminare & Vorträge</h3>
-          <p>Inhouse-Schulungen, steuerrechtliche Seminare und praxisnahe Vorträge für Unternehmen, Teams und Fachpublikum.</p>
+          <div class="number">03</div>
+          <h3>Gestaltungsberatung</h3>
+          <p>
+            Vorausschauende Beratung zu Unternehmensstrukturierung, Rechtsformfragen, steuerlicher Optimierung und langfristiger Planung unternehmerischer Entscheidungen.
+          </p>
         </article>
 
         <article class="service">
-          <span>04</span>
-          <h3>Privat- kunden</h3>
-          <p>Ausgewählte private Steuererklärungen und steuerliche Beratung — professionell, klar und mit Qualitätsanspruch.</p>
+          <div class="number">04</div>
+          <h3>Seminare & Schulungen</h3>
+          <p>
+            Inhouse-Schulungen, Seminare und Vorträge im Steuerrecht — fachlich fundiert, verständlich aufbereitet und mit direktem Praxisbezug.
+          </p>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="profil">
+  <section id="kanzlei" class="soft-section">
     <div class="container split">
-      <div class="about-card">
-        <h3>Erfahrung, die Perspektive schafft.</h3>
+      <div class="profile-card">
+        <h3>Patrick Lerbs</h3>
+        <div class="role">Dipl. Finanzwirt (FH) · Steuerberater · Dozent im Steuerrecht</div>
         <p>
-          Patrick Lerbs kennt Steuerrecht nicht nur aus der Beratung, sondern auch aus Finanzverwaltung und Lehre. Genau diese Kombination macht seine Beratung besonders klar, belastbar und praxisnah.
+          Patrick Lerbs verbindet steuerrechtliche Fachkompetenz mit einem klaren Verständnis für Verwaltungsabläufe und unternehmerische Anforderungen. Seine Beratung ist professionell, ehrlich und auf langfristige Sicherheit ausgerichtet.
         </p>
       </div>
 
       <div class="timeline">
         <div class="timeline-item">
-          <b>Ursprung</b>
-          <h4>Start in der Finanzverwaltung</h4>
-          <p>Der berufliche Weg begann beim Finanzamt — mit direktem Einblick in Denkweise, Abläufe und Anforderungen der Verwaltung.</p>
+          <strong>Erfahrung aus der Finanzverwaltung</strong>
+          <p>
+            Der berufliche Weg begann beim Finanzamt. Dieses Wissen schafft ein besonderes Verständnis dafür, wie steuerliche Sachverhalte geprüft, bewertet und eingeordnet werden.
+          </p>
         </div>
 
         <div class="timeline-item">
-          <b>Qualifikation</b>
-          <h4>Steuerberaterprüfung & freie Mitarbeit</h4>
-          <p>Nach der Steuerberaterprüfung folgte die Tätigkeit als freier Mitarbeiter und die konsequente Spezialisierung auf anspruchsvolle steuerliche Beratung.</p>
+          <strong>Qualifikation als Steuerberater</strong>
+          <p>
+            Nach der Steuerberaterprüfung folgten praktische Beratungserfahrung und die fachliche Spezialisierung auf anspruchsvolle steuerliche Fragestellungen.
+          </p>
         </div>
 
         <div class="timeline-item">
-          <b>Heute</b>
-          <h4>Digitale Kanzlei mit unternehmerischem Fokus</h4>
-          <p>Heute steht die Steuerberatung Patrick Lerbs für moderne, ehrliche und vorausschauende Beratung — besonders für Unternehmer, GmbHs und Geschäftsführer.</p>
+          <strong>Dozent im Steuerrecht</strong>
+          <p>
+            Als Dozent vermittelt Patrick Lerbs steuerrechtliche Inhalte verständlich und praxisnah. Dieses didaktische Know-how prägt auch die Mandantenberatung.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="beratung">
+  <section id="werte">
     <div class="container">
-      <div class="section-title">
-        <div class="kicker">Arbeitsweise</div>
-        <h2>Digital, persönlich und auf den Punkt.</h2>
+      <div class="section-head">
+        <div class="section-kicker">Arbeitsweise</div>
+        <h2>Professionell in der Sache. Persönlich in der Beratung.</h2>
         <p>
-          Beratungstermine erfolgen nach Vereinbarung — persönlich oder online. Der Anspruch: weniger Reibung, mehr Klarheit und bessere Entscheidungen.
+          Mandanten erhalten keine Beratung von der Stange, sondern klare Einschätzungen, strukturierte Prozesse und eine Zusammenarbeit, die zu modernen Unternehmen passt.
         </p>
       </div>
 
-      <div class="services">
-        <article class="service">
-          <span>Analyse</span>
-          <h3>Situation verstehen</h3>
-          <p>Unternehmensstruktur, steuerliche Ausgangslage, Prozesse und Ziele werden klar eingeordnet.</p>
+      <div class="values-grid">
+        <article class="value-card">
+          <h3>Vorausschauend</h3>
+          <p>
+            Steuerliche Beratung beginnt nicht erst mit der Abgabefrist. Ziel ist es, Entscheidungen frühzeitig vorzubereiten und steuerliche Auswirkungen rechtzeitig mitzudenken.
+          </p>
         </article>
 
-        <article class="service">
-          <span>Strategie</span>
-          <h3>Potenziale erkennen</h3>
-          <p>Gestaltungsmöglichkeiten, Risiken und Optimierungen werden verständlich herausgearbeitet.</p>
+        <article class="value-card">
+          <h3>Digital organisiert</h3>
+          <p>
+            Dokumentenaustausch, Kommunikation und laufende Prozesse können digital abgebildet werden — effizient, nachvollziehbar und zeitgemäß.
+          </p>
         </article>
 
-        <article class="service">
-          <span>Umsetzung</span>
-          <h3>Digital arbeiten</h3>
-          <p>Dokumente, Kommunikation und Abläufe werden effizient und zeitgemäß organisiert.</p>
+        <article class="value-card">
+          <h3>Ehrlich & verlässlich</h3>
+          <p>
+            Steuerberatung braucht Vertrauen. Deshalb stehen klare Worte, realistische Einschätzungen und eine seriöse Begleitung im Mittelpunkt.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Mandatsablauf</div>
+        <h2>Klare Struktur vom ersten Gespräch bis zur laufenden Betreuung.</h2>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-card">
+          <span>Schritt 1</span>
+          <h3>Ausgangslage verstehen</h3>
+          <p>
+            Zunächst werden Unternehmen, Struktur, steuerliche Themen und Ziele eingeordnet.
+          </p>
         </article>
 
-        <article class="service">
-          <span>Begleitung</span>
-          <h3>Zukunft sichern</h3>
-          <p>Laufende Betreuung mit Weitblick, damit steuerliche Themen planbar bleiben.</p>
+        <article class="process-card">
+          <span>Schritt 2</span>
+          <h3>Beratungsbedarf definieren</h3>
+          <p>
+            Anschließend werden laufende Pflichten, mögliche Risiken und Gestaltungspotenziale klar priorisiert.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <span>Schritt 3</span>
+          <h3>Digital zusammenarbeiten</h3>
+          <p>
+            Die weitere Betreuung erfolgt strukturiert, zuverlässig und auf Wunsch weitgehend digital.
+          </p>
         </article>
       </div>
     </div>
   </section>
 
   <section id="kontakt" class="cta">
-    <div class="container cta-box">
+    <div class="container cta-grid">
       <div>
-        <h2>Bereit für Steuerberatung mit Weitblick?</h2>
+        <h2>Sie suchen steuerliche Beratung mit Substanz?</h2>
         <p>
-          Vereinbaren Sie jetzt einen Termin nach Absprache. Ideal für Unternehmer, Geschäftsführer und Betriebe, die ihre steuerlichen Themen professionell und digital lösen möchten.
+          Vereinbaren Sie einen Termin nach Absprache. Die Kanzlei richtet sich insbesondere an Unternehmer, GmbH-Geschäftsführer und Geschäftskunden, die Wert auf professionelle, digitale und vorausschauende Steuerberatung legen.
         </p>
-        <br><br>
-        <a class="btn btn-primary" href="mailto:lerbs@stblerbs.com">Kontakt aufnehmen</a>
+
+        <a href="mailto:lerbs@stblerbs.com" class="btn btn-primary">Termin anfragen</a>
       </div>
 
-      <div class="contact">
-        <div>
+      <div class="contact-card">
+        <div class="contact-line">
           <strong>Steuerberatung Patrick Lerbs</strong>
-          Kapping 40<br>
-          94474 Vilshofen an der Donau
+          <span>Kapping 40<br>94474 Vilshofen an der Donau</span>
         </div>
-        <div>
+
+        <div class="contact-line">
           <strong>Telefon</strong>
           <a href="tel:+491718020140">+49 171 80 20 140</a>
         </div>
-        <div>
+
+        <div class="contact-line">
           <strong>E-Mail</strong>
           <a href="mailto:lerbs@stblerbs.com">lerbs@stblerbs.com</a>
         </div>
-        <div>
+
+        <div class="contact-line">
           <strong>Öffnungszeiten</strong>
-          Mo–Mi: 08:00–18:00 Uhr<br>
-          Do–Fr: 08:00–15:00 Uhr<br>
-          Termine nach Vereinbarung
+          <span>
+            Mo–Mi: 08:00–18:00 Uhr<br>
+            Do–Fr: 08:00–15:00 Uhr<br>
+            Termine nach Vereinbarung
+          </span>
         </div>
       </div>
     </div>
